@@ -1,7 +1,9 @@
-import Main from "./Components/Pages/Main/Main";
+import Main from "./Components/Main/Main";
 
 export default function App() {
   return (
-    <Main />
+    <div>
+      <Main />
+    </div>
   )
 }
