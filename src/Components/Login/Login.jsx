@@ -1,4 +1,5 @@
 export default function Login() {
+<<<<<<< HEAD
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-bg-color ">
             <div className="flex flex-col text-center items-center justify-center border border-secondary p-20 bg-[#fff]">
@@ -20,4 +21,17 @@ export default function Login() {
             </div>
         </div >
     )
+=======
+  return (
+    <div className="grid grid-cols-1 items-center justify-items-center h-screen">
+      <div>
+        <h1>Welcome Back</h1>
+        <p>Sign in to Your Accountsdfghjkjhgfdg</p>
+      </div>
+      <form className="flex flex-col gap-4">
+        <input type="text" />
+      </form>
+    </div>
+  );
+>>>>>>> 82c4ee70f7a9fa4c8d0b4da56beb7524fa59c483
 }
