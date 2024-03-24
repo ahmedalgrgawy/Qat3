@@ -16,7 +16,7 @@ function IntroPage() {
                     <p className='text-sm mb-20 text-secondary font-semibold'>Shop Thousand of local products</p>
                     <div className="flex flex-col gap-10">
                         <button className="main-btn px-36 ">I Am New Here</button>
-                        <button className="second-btn px-36">Login</button>
+                        <button className="second-btn px-36">Log in</button>
                     </div>
                 </div>
             </div>
