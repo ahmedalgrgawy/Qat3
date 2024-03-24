@@ -12,7 +12,7 @@ export default function Login() {
                     <label className="text-left pl-3 font-semibold text-main mt-3" htmlFor="password">Password</label>
                     <input className="pr-40 pl-10 py-4 rounded-full border border-secondary " id="password" type="password" name="Password" placeholder="Your Password" />
                     <div>
-                        <button className="main-btn mt-3" type="submit">Login</button>
+                        <button className="main-btn mt-3" type="submit">Log in</button>
                     </div>
                     <div>
                         <p className="text-secondary mt-3">Forgot Password?</p>
