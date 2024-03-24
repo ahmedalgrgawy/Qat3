@@ -4,7 +4,7 @@ export default function Login() {
             <div className="flex flex-col text-center items-center justify-center border border-secondary p-20 bg-[#fff] rounded-3xl">
                 <div className="mb-16">
                     <h1 className="text-main text-5xl mb-2 font-bold">Welcome Back</h1>
-                    <p className="text-secondary text-xs">Sign in to Your Account</p>
+                    <p className="text-secondary text-xs font-semibold">Sign in to Your Account</p>
                 </div>
                 <div className="flex flex-col gap-4">
                     <label className="text-left pl-3 font-semibold text-main" htmlFor="email">E-Mail</label>

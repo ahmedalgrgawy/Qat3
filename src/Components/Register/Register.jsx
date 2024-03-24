@@ -4,7 +4,7 @@ export default function Register() {
       <div className="flex flex-col text-center items-center justify-center border border-secondary py-10 px-20 bg-[#fff] rounded-3xl">
         <div className="mb-10">
           <h1 className="text-main text-5xl mb-3 font-bold">Sign Up</h1>
-          <p className="text-secondary text-xs">Create an Account for your favorite products</p>
+          <p className="text-secondary text-xs font-semibold">Create an Account to shop your favorite products</p>
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-left pl-3 font-semibold text-main" htmlFor="name">Name</label>
