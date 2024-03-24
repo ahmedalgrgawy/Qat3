@@ -8,4 +8,8 @@
     body {
         font-family: "Roboto", sans-serif;
     }
+
+    .main-btn {
+        @apply px-12 py-3 text-white text-lg border bg-main rounded-xl hover:bg-main-darker duration-300;
+    }
 }
