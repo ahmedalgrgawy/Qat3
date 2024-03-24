@@ -1,7 +1,7 @@
 export default function Login() {
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-bg-color ">
-            <div className="flex flex-col text-center items-center justify-center border border-secondary p-20 bg-[#fff]">
+        <div className="flex flex-col items-center justify-center h-screen">
+            <div className="flex flex-col text-center items-center justify-center border border-secondary p-20 bg-[#fff] rounded-3xl">
                 <div className="mb-16">
                     <h1 className="text-main text-5xl mb-2 font-bold">Welcome Back</h1>
                     <p className="text-secondary text-xs">Sign in to Your Account</p>
