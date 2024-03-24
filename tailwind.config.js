@@ -7,8 +7,11 @@ export default {
   theme: {
     colors: {
       'bg-color': '#d7d7d7',
+      'bg-secondary-color': '#bebfc4',
       'main': '#4f5e7b',
-      'secondary': '#7e8494'
+      'main-darker': '#3b4356',
+      'secondary': '#7e8494',
+      'third': '#9e9da2'
     },
     extend: {},
   },
