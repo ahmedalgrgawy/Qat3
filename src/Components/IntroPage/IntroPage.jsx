@@ -3,7 +3,7 @@ import introPageImg from '../../assets/landing-image.png'
 function IntroPage() {
     return (
         <div className='h-screen grid grid-cols-2 gap-10 grid-rows-1'>
-            <div className="flex justify-start items-center flex-col border-r-8 border-r-main-darker">
+            <div className="flex justify-start items-center flex-col">
                 <div className='mt-36 text-center'>
                     <h1 className='text-5xl text-main mb-5 font-bold'>Welcome To Qat3</h1>
                     <p className='text-sm mb-14 text-secondary font-semibold'>Local Products E-Commerce Platform</p>
