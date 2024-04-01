@@ -1,3 +1,4 @@
+import About from "../About/About";
 import IntroPage from "../IntroPage/IntroPage";
 import Features from "../LandingPage/Features";
 import LandingPage from "../LandingPage/LandingPage";
@@ -8,10 +9,11 @@ import Register from "../Register/Register";
 export default function Main() {
     return (
         <div>
-            <Navbar />
-            <LandingPage />
-            <Features />
             {/* <IntroPage /> */}
+            {/* <Navbar />
+            <LandingPage />
+            <Features /> */}
+            <About />
             {/* <Login /> */}
             {/* <Register /> */}
         </div>
