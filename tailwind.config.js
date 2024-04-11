@@ -12,6 +12,7 @@ export default {
       'main-darker': '#3b4356',
       'secondary': '#7e8494',
       'third': '#9e9da2',
+      'fourth': '#f5f5f5',
       'white': '#fff'
     },
     extend: {},

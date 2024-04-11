@@ -1,0 +1,130 @@
+.header {
+    box-shadow: 0 2px 16px hsla(230, 75%, 32%, 0.15);
+    z-index: 100;
+}
+
+.nav-close,
+.nav-search,
+.user,
+.cart,
+.nav-toggle {
+    font-size: 1.25rem;
+    color: var(--main);
+    cursor: pointer;
+    transition: color 0.4s;
+}
+
+:is(.nav-search, .user, .cart, .nav-toggle, .nav-link):hover {
+    color: var(--main-darker);
+}
+
+@media (max-width: 1023px) {
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        right: 0;
+        background-color: var(--fourth);
+        height: 100%;
+        padding: 4.5rem 4rem;
+        transition: top 0.4s;
+    }
+}
+
+.nav-link {
+    color: var(--main);
+    transition: color 0.4s;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+}
+
+.nav-link::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px var(--secondary);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 1115px) and (max-width: 1023px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .nav-toggle,
+    .nav-close {
+        display: none;
+    }
+}
+
+.search {
+    z-index: 1000;
+    background-color: hsla(230, 75%, 15%, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    padding: 8rem 1.5rem 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+}
+
+.search-form {
+    background-color: hsl(230, 100%, 97%);
+    box-shadow: 0 8px 32px hsla(230, 75%, 15%, 0.2);
+    transform: translateY(-1rem);
+    transition: transform 0.4s;
+}
+
+.search-input {
+    background-color: hsl(230, 100%, 97%);
+    color: hsl(230, 12%, 40%);
+}
+
+.search-input::placeholder {
+    color: hsl(230, 12%, 40%);
+}
+
+.show-search {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.show-search .search-form {
+    transform: translateY(0);
+}
+
+.search-close {
+    color: var(--main);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+    .search {
+        padding-top: 10rem;
+    }
+
+    .search-form {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .search-close {
+        width: max-content;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        font-size: 2rem;
+    }
+}
