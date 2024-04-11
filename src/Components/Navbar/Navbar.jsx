@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Navbar.css';
 import logoNav from '../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaUserCircle, FaBars } from 'react-icons/fa';

@@ -10,25 +10,20 @@
         font-family: "Roboto", sans-serif;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     .main-btn {
-        @apply px-12 py-3 text-white text-lg border bg-main rounded-xl hover: bg-main-darker duration-300;
+        @apply px-12 py-3 text-white text-lg border bg-main rounded-xl hover:bg-main-darker duration-300;
     }
 
     .second-btn {
-        @apply px-12 py-3 text-white text-lg border bg-secondary rounded-xl hover: bg-third duration-300;
+        @apply px-12 py-3 text-white text-lg border bg-secondary rounded-xl hover:bg-third duration-300;
     }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
 
-html {
-    scroll-behavior: smooth;
-}
 
 :root {
     --bg-color: #d7d7d7;
