@@ -15,7 +15,7 @@
     }
 
     .container {
-        @apply px-[25px] mx-auto;
+        @apply px-[40px] mx-auto;
     }
 
     .custom-height {
@@ -32,6 +32,10 @@
 
     .main-title {
         @apply uppercase mt-28 mx-auto border-2 py-[10px] px-[20px] text-[30px] w-fit z-[1] cursor-pointer hover:bg-main-darker hover:text-white duration-300 ease-in-out delay-75;
+    }
+
+    .col{
+        @apply flex flex-col items-start mb-[20px];
     }
 }
 

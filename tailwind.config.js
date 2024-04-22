@@ -15,7 +15,7 @@ export default {
       },
       height: {
         "containerHeight": "calc(100vh - 56px)",
-      }
+      },
     },
   },
   plugins: [],
