@@ -12,6 +12,7 @@ import { useState } from "react";
 import Navbar from "./Components/Home/Navbar/Navbar";
 import Footer from "./Components/Home/Footer/Footer";
 import Newsletters from "./Components/Home/Newsletters/Newsletters";
+import OurTeam from "./Components/Pages/OurTeam/OurTeam";
 
 export default function App() {
   const [userAuth, setUserAuth] = useState(true);
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/reviews" element={<Reviews />}></Route>
+          <Route path="/our-team" element={<OurTeam />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
         </Routes>

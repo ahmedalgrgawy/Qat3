@@ -58,6 +58,11 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li className="nav-item">
+                            <Link to={'/our-team'} className="nav-link text-main">
+                                Team
+                            </Link>
+                        </li>
+                        <li className="nav-item">
                             <Link to={'/contact'} className="nav-link text-main">
                                 Contact
                             </Link>
