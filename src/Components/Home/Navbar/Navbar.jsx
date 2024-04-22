@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Navbar.css';
-import logoNav from '../../assets/logo3.png';
+import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaUserCircle, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -48,7 +48,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <a href="#" className="nav-link text-main">
-                                Gallery
+                                Shop
                             </a>
                         </li>
                         <li className="nav-item">

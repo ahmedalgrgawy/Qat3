@@ -1,10 +1,10 @@
 import "./Features.css";
-import f1 from "../../assets/img/f1.png";
-import f2 from "../../assets/img/f2.png";
-import f3 from "../../assets/img/f3.png";
-import f4 from "../../assets/img/f4.png";
-import f5 from "../../assets/img/f5.png";
-import f6 from "../../assets/img/f6.png";
+import f1 from "../../../assets/img/f1.png";
+import f2 from "../../../assets/img/f2.png";
+import f3 from "../../../assets/img/f3.png";
+import f4 from "../../../assets/img/f4.png";
+import f5 from "../../../assets/img/f5.png";
+import f6 from "../../../assets/img/f6.png";
 
 const Features = () => {
   return (
