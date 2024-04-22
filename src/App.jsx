@@ -11,6 +11,7 @@ import Cart from "./Components/Pages/Cart/Cart";
 import { useState } from "react";
 import Navbar from "./Components/Home/Navbar/Navbar";
 import Footer from "./Components/Home/Footer/Footer";
+import Newsletters from "./Components/Home/Newsletters/Newsletters";
 
 export default function App() {
   const [userAuth, setUserAuth] = useState(true);
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
         </Routes>
+        <Newsletters />
         <Footer />
       </BrowserRouter>
     </div >
