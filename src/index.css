@@ -15,7 +15,7 @@
     }
 
     .container {
-        @apply px-[40px] mx-auto;
+        @apply px-[80px] mx-auto;
     }
 
     .custom-height {
