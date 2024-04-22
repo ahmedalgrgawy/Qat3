@@ -3,6 +3,7 @@ import './Navbar.css';
 import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaUserCircle, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className="header fixed top-0 left-0 w-full bg-white " id="header">
+        <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center">
                 <a href="#">
                     <img src={logoNav} className="nav-logo h-14" alt="Logo" />
@@ -37,29 +38,29 @@ const Navbar = () => {
                 >
                     <ul className="nav-list flex gap-x-6 text-center">
                         <li className="nav-item ">
-                            <a href="#" className="nav-link text-main">
+                            <Link to={"/"} className="nav-link text-main">
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link text-main">
+                            <Link to={'/about'} className="nav-link text-main">
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link text-main">
+                            <Link to={'/shop'} className="nav-link text-main">
                                 Shop
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link text-main">
+                            <Link to={'/reviews'} className="nav-link text-main">
                                 Reviews
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a href="#" className="nav-link text-main">
+                            <Link to={'/contact'} className="nav-link text-main">
                                 Contact
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div
@@ -76,7 +77,9 @@ const Navbar = () => {
                         id="search-btn"
                         onClick={handleSearchToggle}
                     />
-                    <FaShoppingCart className="cart" id="cart" />
+                    <Link to={"/cart    "}>
+                        <FaShoppingCart className="cart" id="cart" />
+                    </Link>
                     <FaUserCircle className="user" id="user" />
                     <div id="nav-toggle" onClick={handleToggle}>
                         <FaBars className="nav-toggle" />

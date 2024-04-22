@@ -22,16 +22,3 @@
         @apply px-12 py-3 text-white text-lg border bg-secondary rounded-xl hover:bg-third duration-300;
     }
 }
-
-
-
-:root {
-    --bg-color: #d7d7d7;
-    --bg-secondary-color: #bebfc4;
-    --main: #4f5e7b;
-    --main-darker: #3b4356;
-    --secondary: #7e8494;
-    --third: #9e9da2;
-    --fourth: #f4f4f4;
-    --white: #fff;
-}

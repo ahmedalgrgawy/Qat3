@@ -1,6 +1,6 @@
 
-export const Reviews = () => {
-    return (
-        <div>Reviews</div>
-    )
+export default function Reviews() {
+  return (
+    <div>Reviews</div>
+  )
 }
