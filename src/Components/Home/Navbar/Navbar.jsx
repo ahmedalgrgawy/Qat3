@@ -77,7 +77,7 @@ const Navbar = () => {
                         id="search-btn"
                         onClick={handleSearchToggle}
                     />
-                    <Link to={"/cart    "}>
+                    <Link to={"/cart"}>
                         <FaShoppingCart className="cart" id="cart" />
                     </Link>
                     <FaUserCircle className="user" id="user" />

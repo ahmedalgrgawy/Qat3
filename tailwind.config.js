@@ -13,6 +13,9 @@ export default {
         "fourth": "#f5f5f5",
         "white": "#fff",
       },
+      height: {
+        "containerHeight": "calc(100vh - 56px)",
+      }
     },
   },
   plugins: [],

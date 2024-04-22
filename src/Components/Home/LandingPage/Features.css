@@ -6,5 +6,17 @@
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  width: 180px;
+  cursor: pointer;
+  margin-bottom: 35px;
+  text-align: center;
+  padding: 30px;
+}
+
+.box img {
+  width: 70%;
+}
+
+.landing {
+  height: calc(100vh - 56px);
+  margin-top: 56px;
 }

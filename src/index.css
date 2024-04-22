@@ -6,12 +6,20 @@
 
 @layer base {
     body {
-        @apply bg-bg-color capitalize;
+        @apply capitalize;
         font-family: "Roboto", sans-serif;
     }
 
     html {
         scroll-behavior: smooth;
+    }
+
+    .container {
+        @apply px-[25px] mx-auto;
+    }
+
+    .custom-height {
+        @apply h-containerHeight mt-[56px];
     }
 
     .main-btn {
@@ -21,4 +29,19 @@
     .second-btn {
         @apply px-12 py-3 text-white text-lg border bg-secondary rounded-xl hover:bg-third duration-300;
     }
+
+    .main-title {
+        @apply uppercase mt-28 mx-auto border-2 py-[10px] px-[20px] text-[30px] w-fit z-[1] cursor-pointer hover:bg-main-darker hover:text-white duration-300 ease-in-out delay-75;
+    }
+}
+
+:root {
+    --bg-color: #d7d7d7;
+    --bg-secondary-color: #bebfc4;
+    --main: #4f5e7b;
+    --main-darker: #3b4356;
+    --secondary: #7e8494;
+    --third: #9e9da2;
+    --fourth: #f4f4f4;
+    --white: #fff;
 }

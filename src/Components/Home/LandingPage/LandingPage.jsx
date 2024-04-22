@@ -4,19 +4,19 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <div className="Home mb-14 ">
+    <div className="custom-height">
       <section
         style={{
           backgroundImage: `url(${background})`,
         }}
-        className="bg-cover bg-no-repeat min-w-full h-screen flex-col "
+        className="bg-cover bg-no-repeat min-w-full h-screen flex justify-center items-center"
       >
         <div
-          className="container "
+          className="container flex flex-col justify-start items-center text-center"
           style={{
             backgroundColor: "transparent",
             textAlign: "center",
-            paddingTop: "15%",
+            // paddingTop: "15%",
             padding: "20px",
           }}
         >
