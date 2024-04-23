@@ -12,7 +12,6 @@ import { useState } from "react";
 import Navbar from "./Components/Home/Navbar/Navbar";
 import Footer from "./Components/Home/Footer/Footer";
 import Newsletters from "./Components/Home/Newsletters/Newsletters";
-import OurTeam from "./Components/Pages/OurTeam/OurTeam";
 import SingleProduct from "./Components/Pages/SingleProduct/SingleProduct"
 
 export default function App() {
@@ -31,7 +30,6 @@ export default function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
             <Route path="/reviews" element={<Reviews />}></Route>
-            <Route path="/our-team" element={<OurTeam />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/single-product" element={<SingleProduct />}></Route>
