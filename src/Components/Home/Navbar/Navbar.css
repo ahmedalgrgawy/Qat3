@@ -28,6 +28,10 @@
         padding: 4.5rem 4rem;
         transition: top 0.4s;
     }
+
+    .nav-item .active {
+        color: #1169c0;
+    }
 }
 
 .nav-link {
@@ -62,6 +66,10 @@
         flex-direction: column;
         row-gap: 1.5rem;
     }
+
+    .nav-item .active {
+        color: #1169c0;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -69,6 +77,10 @@
     .nav-toggle,
     .nav-close {
         display: none;
+    }
+
+    .nav-item .active {
+        color: #1169c0;
     }
 }
 
