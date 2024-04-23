@@ -40,6 +40,10 @@
     display: inline-block;
 }
 
+.nav-item .active {
+    color: #1169c0;
+}
+
 .nav-link::after {
     display: block;
     content: '';

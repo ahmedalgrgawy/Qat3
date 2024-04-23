@@ -3,7 +3,7 @@ import './Navbar.css';
 import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaUserCircle, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -38,30 +38,31 @@ const Navbar = () => {
                 >
                     <ul className="nav-list flex gap-x-6 text-center">
                         <li className="nav-item ">
-                            <Link to={"/"} className="nav-link text-main">
+                            <NavLink to={"/"} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Home
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/about'} className="nav-link text-main">
+                            <NavLink to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 About
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/shop'} className="nav-link text-main">
+                            <NavLink to={'/shop'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Shop
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/reviews'} className="nav-link text-main">
+                            <NavLink to={'/reviews'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Reviews
-                            </Link>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link to={'/contact'} className="nav-link text-main">
+                            <NavLink to={'/contact'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Contact
-                            </Link>
+                            </NavLink>
                         </li>
+
                     </ul>
                     <div
                         className="nav-close absolute top-5 right-6  "
