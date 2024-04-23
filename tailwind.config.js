@@ -14,7 +14,7 @@ export default {
         "white": "#fff",
       },
       height: {
-        "containerHeight": "calc(100vh - 56px)",
+        "containerHeight": "calc(100vh - 60px)",
       },
     },
   },
