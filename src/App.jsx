@@ -20,23 +20,32 @@ export default function App() {
 
   return (
     <div>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={userAuth ? <Home /> : <IntroPage />}></Route>
-          <Route path="/register" element={<Register />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
-          <Route path="/reviews" element={<Reviews />}></Route>
-          <Route path="/our-team" element={<OurTeam />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
-          <Route path="/single-product" element={<SingleProduct />}></Route>
-        </Routes>
-        <Newsletters />
-        <Footer />
-      </BrowserRouter>
+
+      {userAuth ?
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/shop" element={<Shop />}></Route>
+            <Route path="/reviews" element={<Reviews />}></Route>
+            <Route path="/our-team" element={<OurTeam />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/single-product" element={<SingleProduct />}></Route>
+          </Routes>
+          <Newsletters />
+          <Footer />
+        </BrowserRouter> : <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<IntroPage />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/register" element={<Register />}></Route>
+          </Routes>
+        </BrowserRouter>}
+
     </div >
   );
 }
