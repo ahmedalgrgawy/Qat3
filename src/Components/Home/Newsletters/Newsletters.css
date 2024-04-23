@@ -1,0 +1,12 @@
+
+#newsletter input {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import introPageImg from '../../assets/landing-image.png'
+import introPageImg from '../../../assets/landing-image.png'
 
 
 function IntroPage() {

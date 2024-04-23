@@ -6,12 +6,20 @@
 
 @layer base {
     body {
-        @apply bg-bg-color capitalize;
+        @apply capitalize;
         font-family: "Roboto", sans-serif;
     }
 
     html {
         scroll-behavior: smooth;
+    }
+
+    .container {
+        @apply px-[80px] mx-auto;
+    }
+
+    .custom-height {
+        @apply h-containerHeight mt-[56px];
     }
 
     .main-btn {
@@ -21,9 +29,15 @@
     .second-btn {
         @apply px-12 py-3 text-white text-lg border bg-secondary rounded-xl hover:bg-third duration-300;
     }
+
+    .main-title {
+        @apply uppercase mt-28 mx-auto border-2 py-[10px] px-[20px] text-[30px] w-fit z-[1] cursor-pointer hover:bg-main-darker hover:text-white duration-300 ease-in-out delay-75;
+    }
+
+    .col{
+        @apply flex flex-col items-start mb-[20px];
+    }
 }
-
-
 
 :root {
     --bg-color: #d7d7d7;
