@@ -4,7 +4,7 @@ import { LatestProducts } from "./LatestProducts/LatestProducts";
 
 
 
-export default function Main() {
+export default function Home() {
     return (
         <div>
             <LandingPage />

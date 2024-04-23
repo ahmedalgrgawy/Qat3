@@ -6,8 +6,8 @@ export const LatestProducts = () => {
         <div>
             <h2 className="main-title">Latest Products</h2>
             <div className="container text-center">
-                <div className="products flex justify-between flex-wrap">
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                <div className="products flex justify-center md:justify-around flex-wrap">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -20,11 +20,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -37,11 +37,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -54,11 +54,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -71,11 +71,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -88,11 +88,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -105,11 +105,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -122,11 +122,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -139,11 +139,11 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-                    <div className="product mt-14 w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                    <div className="product mt-14 w-[70%] md:w-[45%] lg:w-[30%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                         <img className="w-full rounded-2xl" src={product} alt="" />
                         <div className="info text-start py-[10px]">
                             <span className="font-normal text-[14px] " >Adidas</span>
@@ -156,11 +156,10 @@ export const LatestProducts = () => {
                             </div>
                             <h4 className="pt-2.5 text-main-darker text-[16px] font-black">25$</h4>
                         </div>
-                        <a href="#" className="absolute right-10 bottom-10 w-14 h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                            <i className="text-white">{<FaShoppingCart size={25} />}</i>
+                        <a href="#" className="absolute right-10 bottom-10 w-10 h-10 md:w-14 md:h-14 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                            <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>

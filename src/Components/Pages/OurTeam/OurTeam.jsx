@@ -8,7 +8,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 export default function OurTeam() {
     return (
         <div className="container">
-            <h2 className="main-title mb-10">Our Team</h2>
+            <h2 className="main-title mb-14">Our Team</h2>
             <div className="team-members flex justify-between items-center flex-wrap">
                 <div className="member w-[30%] border-2 rounded-3xl border-main-darker p-[20px] flex flex-col justify-center items-center bg-[#eee]">
                     <div className="py-3 px-6 text-center border-b-2 border-opacity-60 border-main-darker flex flex-col justify-center items-center">
@@ -32,7 +32,7 @@ export default function OurTeam() {
                         </div>
                     </div>
 
-                    <div className="py-3 pxgit-6 flex flex-col justify-center items-center">
+                    <div className="py-3 px-6 flex flex-col justify-center items-center">
                         <a href="#"><i>{BsGithub}</i>Github</a>
                         <a href="#"><i>{BsLinkedin}</i>Linkedin</a>
                     </div>
