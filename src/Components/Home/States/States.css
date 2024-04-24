@@ -1,0 +1,46 @@
+.stats {
+    background-image: url(../../../assets/stats.jpg);
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 95%);
+}
+
+.stats-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.stats .box::before,
+.stats .box::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    background-color: var(--main-darker);
+    transition: 0.5s;
+    height: 0;
+}
+
+.stats .box::before {
+    top: 0;
+    right: 0;
+}
+
+.stats .box::after {
+    left: 0;
+    bottom: 0;
+}
+
+.stats .box:hover {
+    opacity: 1;
+}
+
+.stats .box:hover::before,
+.stats .box:hover::after {
+    height: 100%;
+}
