@@ -18,6 +18,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import ScrollButton from "./Components/Home/ScrollButton/ScrollButton ";
 
 
 export default function App() {
@@ -36,7 +37,7 @@ export default function App() {
 
   return (
 
-    <div className="duration-300 delay-300">
+    <div className=" duration-300 delay-300">
       <SignedOut>
         <BrowserRouter scrollToTop={true}>
           <Routes>
@@ -63,6 +64,7 @@ export default function App() {
           </Routes>
           <Newsletters />
           <Footer />
+          <ScrollButton />
         </BrowserRouter>
       </SignedIn>
 

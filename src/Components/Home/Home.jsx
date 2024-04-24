@@ -7,7 +7,7 @@ export default function Home() {
 
 
     return (
-        <div data-aos-offset='100' data-aos-anchor-placement="top-center">
+        <div >
             <LandingPage />
             <Features />
             <States />
