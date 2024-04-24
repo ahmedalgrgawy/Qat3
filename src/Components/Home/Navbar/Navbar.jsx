@@ -5,14 +5,12 @@ import { FaSearch, FaShoppingCart, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Link, NavLink } from 'react-router-dom';
 import { PiSignOutBold } from "react-icons/pi";
-import { useAuth } from '@clerk/clerk-react';
-import { useUser } from "@clerk/clerk-react";
+import { useAuth, UserButton } from '@clerk/clerk-react';
 
 const Navbar = () => {
 
     const { signOut } = useAuth();
 
-    const { user } = useUser();
 
 
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -99,8 +97,8 @@ const Navbar = () => {
                         <FaShoppingCart className="cart" id="cart" />
                     </Link>
 
-                    <Link onClick={scrollToTop} to={"/user-profile"} className="user" id="user">
-                        <img className='w-10 rounded-[50%]' src={user.imageUrl} alt="" />
+                    <Link onClick={scrollToTop} className="user" id="user">
+                        <UserButton afterSignOutUrl='/bye' />
                     </Link>
 
                     <Link to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">

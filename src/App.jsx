@@ -11,7 +11,6 @@ import Navbar from "./Components/Home/Navbar/Navbar";
 import Footer from "./Components/Home/Footer/Footer";
 import Newsletters from "./Components/Home/Newsletters/Newsletters";
 import SingleProduct from "./Components/Pages/SingleProduct/SingleProduct"
-import UserProfilePage from "./Components/AuthPages/UserProfile/UserProfile";
 import IntroPage from "./Components/AuthPages/IntroPage/IntroPage"
 import Bye from "./Components/AuthPages/Bye/Bye";
 import AOS from "aos";
@@ -60,7 +59,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/single-product" element={<SingleProduct />}></Route>
-            <Route path="/user-profile" element={<UserProfilePage />}></Route>
           </Routes>
           <Newsletters />
           <Footer />
