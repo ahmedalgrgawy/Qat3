@@ -4,13 +4,13 @@ import product from "../../../assets/f5.jpg"
 export default function Shop() {
     return (
         <div>
-            <h2 className="main-title my-28">
+            <h2 data-aos="fade-up" className="main-title my-28">
                 Our Shop
             </h2>
             <div>
                 <div className="container text-center">
                     <div className="products flex justify-center md:justify-around flex-wrap">
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -27,7 +27,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -44,7 +44,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -61,7 +61,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -78,7 +78,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -95,7 +95,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -112,7 +112,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>
@@ -129,7 +129,7 @@ export default function Shop() {
                                 <i className="text-white">{<FaShoppingCart className="text-[18px] md:text-[25px]" />}</i>
                             </a>
                         </div>
-                        <div className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                        <div data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
                             <img className="w-full rounded-2xl" src={product} alt="" />
                             <div className="info text-start py-[10px]">
                                 <span className="font-normal text-[14px] " >Adidas</span>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^4.30.10",
     "@reduxjs/toolkit": "^2.2.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "firebase": "^10.10.0",
     "node-sass": "^9.0.0",

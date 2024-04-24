@@ -7,10 +7,10 @@ import "./States.css"
 const States = () => {
     return (
         <div className="stats relative bg-cover min-h-[300px] py-10">
-            <h2 className='font-bold text-[40px] w-fit mx-auto mt-0 mb-[50px] relative'>
+            <h2 data-aos='fade-down' data-aos-delay='400' className='font-bold text-[40px] w-fit mx-auto mt-0 mb-[50px] relative'>
                 Our States
             </h2>
-            <div className='stats-container container relative grid gap-10 text-center'>
+            <div data-aos='fade-up' data-aos-delay='400' className='stats-container container relative grid gap-10 text-center'>
                 <div className="box flex flex-col justify-center items-center bg-white py-[30px] px-[15px] text-center relative opacity-80 duration-300">
                     <i className="text-5xl">{<IoPersonSharp />}</i>
                     <span className="block text-[50px] font-bold my-3">10,000</span>

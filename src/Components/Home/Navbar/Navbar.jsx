@@ -7,7 +7,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { PiSignOutBold } from "react-icons/pi";
 import { useAuth } from '@clerk/clerk-react';
 import { useUser } from "@clerk/clerk-react";
-// "Auth Logic, Login, Logut, Signup, User Profile, fixing other things"
+
+
 const Navbar = () => {
 
     const { signOut } = useAuth();
@@ -37,7 +38,7 @@ const Navbar = () => {
     return (
         <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center px-[20px] py-[30px]">
-                <a href="#">
+                <a href="/">
                     <img src={logoNav} className="nav-logo h-14" alt="Logo" />
                 </a>
 
@@ -52,7 +53,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink reloadDocument={true} to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 About
                             </NavLink>
                         </li>

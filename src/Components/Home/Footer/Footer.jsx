@@ -8,7 +8,7 @@ import { Link } from "react-router-dom"
 export default function Footer() {
   return (
     <footer className="px-[40px] pt-[60px] pb-[20px] bg-main text-white flex justify-between flex-wrap">
-      <div className="col">
+      <div data-aos='zoom-in' data-aos-delay='300' className="col">
         <img src={logoImg} className="logo w-[100px] rounded-full mb-8" alt="" />
         <p className="text-[14px] mb-6"><strong>Address: </strong> 25 Alex Road, Street 20, Cairo</p>
         <p className="text-[14px] mb-6"><strong>Phone: </strong> +045 3333333 || 01067748430</p>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="col">
+      <div data-aos='zoom-in' data-aos-delay='300' className="col">
         <h4 className="text-[16px] pb-12 font-bold tracking-wide">About</h4>
         <a className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" href="#">About Us</a>
         <a className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" href="#">Delivery Information</a>
@@ -34,7 +34,7 @@ export default function Footer() {
 
 
 
-      <div className="col">
+      <div data-aos='zoom-in' data-aos-delay='300' className="col">
         <h4 className="text-[16px] pb-12 font-bold tracking-wide">My Account</h4>
         <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Signs In</Link>
         <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/cart"} href="#">View Cart</Link>
@@ -42,7 +42,7 @@ export default function Footer() {
         <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Help</Link>
       </div>
 
-      <div className="col">
+      <div data-aos='zoom-in' data-aos-delay='300' className="col">
         <h4 className="text-[16px] pb-12 font-bold tracking-wide">install App</h4>
         <p className="mb-3">From App Store || Google Play</p>
         <div className="row">

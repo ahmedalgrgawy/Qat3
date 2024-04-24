@@ -1,8 +1,10 @@
 import { SignUp } from "@clerk/clerk-react";
 
 const SignUpPage = () => {
+
+
   return (
-    <div className="h-screen  flex justify-center items-center">
+    <div data-aos='flip-right' data-delay='500' data-aos-offset='100' className="h-screen  flex justify-center items-center">
       <SignUp path="/sign-up" />
     </div>
   )

@@ -13,18 +13,32 @@ import Newsletters from "./Components/Home/Newsletters/Newsletters";
 import SingleProduct from "./Components/Pages/SingleProduct/SingleProduct"
 import UserProfilePage from "./Components/AuthPages/UserProfile/UserProfile";
 import IntroPage from "./Components/AuthPages/IntroPage/IntroPage"
-
-import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import Bye from "./Components/AuthPages/Bye/Bye";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 
 export default function App() {
 
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      })
+    });
+    AOS.refresh();
+  }, []);
 
   return (
+
     <div className="duration-300 delay-300">
       <SignedOut>
-        <BrowserRouter>
+        <BrowserRouter scrollToTop={true}>
           <Routes>
             <Route path="/" element={<IntroPage />}></Route>
             <Route path="/sign-up" element={<Register />}></Route>
@@ -35,7 +49,7 @@ export default function App() {
       </SignedOut>
 
       <SignedIn>
-        <BrowserRouter>
+        <BrowserRouter scrollToTop={true}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
