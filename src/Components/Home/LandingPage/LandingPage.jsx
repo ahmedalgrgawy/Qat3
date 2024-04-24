@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-    <div className="custom-height mt-[60px]">
+    <div className="custom-height">
       <section
         style={{
           backgroundImage: `url(${background})`,

@@ -45,11 +45,9 @@ const Navbar = () => {
     return (
         <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center px-[20px] py-[30px]">
-                <a onClick={scrollToTop} href="">
-                    <NavLink to={"/"}>
-                        <img src={logoNav} className="nav-logo h-14" alt="Logo" />
-                    </NavLink>
-                </a>
+                <NavLink to={"/"} onClick={scrollToTop} >
+                    <img src={logoNav} className="nav-logo h-14" alt="Logo" />
+                </NavLink>
 
                 <div
                     className={`nav-menu ${isMenuOpen ? 'show-menu top-0 ' : ''}`}

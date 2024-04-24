@@ -7,7 +7,7 @@ export default function Home() {
 
 
     return (
-        <div >
+        <div>
             <LandingPage />
             <Features />
             <States />
