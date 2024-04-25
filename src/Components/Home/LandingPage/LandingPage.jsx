@@ -1,6 +1,6 @@
 import background from "../../../assets/img/123.jpeg";
 import button from "../../../assets/img/button.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -62,7 +62,7 @@ const LandingPage = () => {
               backgroundSize: "cover",
             }}
           >
-            <Link to="/shop">Shop Now!</Link>
+            <NavLink to="/shop">Shop Now!</NavLink>
           </button>
         </div>
       </section>

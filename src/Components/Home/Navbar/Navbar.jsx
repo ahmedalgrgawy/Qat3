@@ -3,7 +3,7 @@ import './Navbar.css';
 import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { PiSignOutBold } from "react-icons/pi";
 import { useAuth, UserButton } from '@clerk/clerk-react';
 
@@ -93,17 +93,17 @@ const Navbar = () => {
                         id="search-btn"
                         onClick={handleSearchToggle}
                     />
-                    <Link onClick={scrollToTop} to={"/cart"}>
+                    <NavLink onClick={scrollToTop} to={"/cart"}>
                         <FaShoppingCart className="cart" id="cart" />
-                    </Link>
+                    </NavLink>
 
-                    <Link onClick={scrollToTop} className="user" id="user">
-                        <UserButton afterSignOutUrl='/bye' />
-                    </Link>
+                    <NavLink className="user" id="user">
+                        <UserButton afterSignOutUrl='https://qat3.vercel.app/bye' />
+                    </NavLink>
 
-                    <Link to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">
+                    <NavLink to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">
                         {<PiSignOutBold />}
-                    </Link>
+                    </NavLink>
 
                     <div id="nav-toggle" onClick={handleToggle}>
                         <FaBars className="nav-toggle" />

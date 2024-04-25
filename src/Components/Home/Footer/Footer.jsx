@@ -3,7 +3,7 @@ import appStore from "../../../assets/app.jpg"
 import playStore from "../../../assets/play.jpg"
 import payImg from "../../../assets/pay.png"
 import { BsFacebook, BsInstagram, BsTwitterX } from "react-icons/bs"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Footer() {
   return (
@@ -36,10 +36,10 @@ export default function Footer() {
 
       <div data-aos='zoom-in' data-aos-delay='300' className="col">
         <h4 className="text-[16px] pb-12 font-bold tracking-wide">My Account</h4>
-        <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Signs In</Link>
-        <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/cart"} href="#">View Cart</Link>
-        <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/shop"} href="#">Shop</Link>
-        <Link className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Help</Link>
+        <NavLink className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Signs In</NavLink>
+        <NavLink className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/cart"} href="#">View Cart</NavLink>
+        <NavLink className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/shop"} href="#">Shop</NavLink>
+        <NavLink className="text-[14px] text-[#eee] mb-6 hover:text-main-darker duration-150" to={"/sign-in"} href="#">Help</NavLink>
       </div>
 
       <div data-aos='zoom-in' data-aos-delay='300' className="col">
