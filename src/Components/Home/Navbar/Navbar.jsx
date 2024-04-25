@@ -98,7 +98,7 @@ const Navbar = () => {
                     </NavLink>
 
                     <NavLink className="user" id="user">
-                        <UserButton afterSignOutUrl={'/bye'} />
+                        <UserButton afterSignOutUrl='/bye' />
                     </NavLink>
 
                     <NavLink to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">
