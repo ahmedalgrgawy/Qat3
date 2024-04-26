@@ -11,18 +11,32 @@ import Navbar from "./Components/Home/Navbar/Navbar";
 import Footer from "./Components/Home/Footer/Footer";
 import Newsletters from "./Components/Home/Newsletters/Newsletters";
 import SingleProduct from "./Components/Pages/SingleProduct/SingleProduct"
-import UserProfilePage from "./Components/AuthPages/UserProfile/UserProfile";
 import IntroPage from "./Components/AuthPages/IntroPage/IntroPage"
-
-import { SignedIn, SignedOut } from "@clerk/clerk-react";
 import Bye from "./Components/AuthPages/Bye/Bye";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
+import ScrollButton from "./Components/Home/ScrollButton/ScrollButton ";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 
 export default function App() {
 
+  useEffect(() => {
+    window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1500,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      })
+    });
+    AOS.refresh();
+  }, []);
 
   return (
-    <div className="duration-300 delay-300">
+
+    <div>
       <SignedOut>
         <BrowserRouter>
           <Routes>
@@ -45,10 +59,11 @@ export default function App() {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/single-product" element={<SingleProduct />}></Route>
-            <Route path="/user-profile" element={<UserProfilePage />}></Route>
+            <Route path="/bye" element={<Bye />}></Route>
           </Routes>
           <Newsletters />
           <Footer />
+          <ScrollButton />
         </BrowserRouter>
       </SignedIn>
 

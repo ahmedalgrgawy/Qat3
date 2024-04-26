@@ -1,6 +1,6 @@
 import background from "../../../assets/img/123.jpeg";
 import button from "../../../assets/img/button.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -20,11 +20,11 @@ const LandingPage = () => {
             padding: "20px",
           }}
         >
-          <h4 style={{ color: "#222", fontSize: "20px" }}>Trade-In-Offer</h4>
-          <h2 style={{ fontSize: "46px", lineHeight: "54px", color: "#222" }}>
+          <h4 data-aos='fade-down' style={{ color: "#222", fontSize: "20px" }}>Trade-In-Offer</h4>
+          <h2 data-aos='fade-down' style={{ fontSize: "46px", lineHeight: "54px", color: "#222" }}>
             Super Value Deals
           </h2>
-          <h1
+          <h1 data-aos='fade-down'
             style={{
               fontSize: "50px",
               lineHeight: "64px",
@@ -34,7 +34,7 @@ const LandingPage = () => {
           >
             On All Products
           </h1>
-          <p
+          <p data-aos='fade-down'
             style={{
               fontSize: "16px",
               color: "#465b52",
@@ -43,7 +43,7 @@ const LandingPage = () => {
           >
             Save More With Coupons & Up To 70% Off!
           </p>
-          <button
+          <button data-aos='fade-down'
             type="button"
             className="bg-no-repeat "
             style={{
@@ -62,7 +62,7 @@ const LandingPage = () => {
               backgroundSize: "cover",
             }}
           >
-            <Link to="/shop">Shop Now!</Link>
+            <NavLink to="/shop">Shop Now!</NavLink>
           </button>
         </div>
       </section>

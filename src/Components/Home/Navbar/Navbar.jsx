@@ -3,16 +3,14 @@ import './Navbar.css';
 import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { PiSignOutBold } from "react-icons/pi";
-import { useAuth } from '@clerk/clerk-react';
-import { useUser } from "@clerk/clerk-react";
-// "Auth Logic, Login, Logut, Signup, User Profile, fixing other things"
+import { useAuth, UserButton } from '@clerk/clerk-react';
+
 const Navbar = () => {
 
     const { signOut } = useAuth();
 
-    const { user } = useUser();
 
 
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -34,12 +32,20 @@ const Navbar = () => {
         setSearchOpen(false);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
+
     return (
         <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center px-[20px] py-[30px]">
-                <a href="#">
+                <NavLink to={"/"} onClick={scrollToTop} >
                     <img src={logoNav} className="nav-logo h-14" alt="Logo" />
-                </a>
+                </NavLink>
 
                 <div
                     className={`nav-menu ${isMenuOpen ? 'show-menu top-0 ' : ''}`}
@@ -47,27 +53,27 @@ const Navbar = () => {
                 >
                     <ul className="nav-list flex gap-x-6 text-center">
                         <li className="nav-item ">
-                            <NavLink to={"/"} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={scrollToTop} to={"/"} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={scrollToTop} to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 About
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/shop'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={scrollToTop} to={'/shop'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Shop
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/reviews'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={scrollToTop} to={'/reviews'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Reviews
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink to={'/contact'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={scrollToTop} to={'/contact'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Contact
                             </NavLink>
                         </li>
@@ -87,17 +93,17 @@ const Navbar = () => {
                         id="search-btn"
                         onClick={handleSearchToggle}
                     />
-                    <Link to={"/cart"}>
+                    <NavLink onClick={scrollToTop} to={"/cart"}>
                         <FaShoppingCart className="cart" id="cart" />
-                    </Link>
+                    </NavLink>
 
-                    <Link to={"/user-profile"} className="user" id="user">
-                        <img className='w-10 rounded-[50%]' src={user.imageUrl} alt="" />
-                    </Link>
+                    <NavLink className="user" id="user">
+                        <UserButton />
+                    </NavLink>
 
-                    <Link to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">
+                    <NavLink to={"/bye"} onClick={() => signOut()} className="sign-out hover:text-red-800 text-red-600" id="sign-out">
                         {<PiSignOutBold />}
-                    </Link>
+                    </NavLink>
 
                     <div id="nav-toggle" onClick={handleToggle}>
                         <FaBars className="nav-toggle" />
