@@ -11,9 +11,9 @@ import image9 from "../../../assets/r_img/image9.jpeg";
 export default function Reviews() {
   return (
     <div>
-      <h2 className="main-title my-28">Reviews</h2>
+      <h2 data-aos="fade-up" className="main-title my-28">Reviews</h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4 container">
-        <section className="border h-full w-full shadow-xl m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 ">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 ">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -39,7 +39,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -66,7 +66,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -92,7 +92,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -119,7 +119,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -147,7 +147,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -172,7 +172,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -197,7 +197,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"
@@ -224,7 +224,7 @@ export default function Reviews() {
             View all Reviews
           </button>
         </section>
-        <section className=" border h-full w-full shadow-xl m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
+        <section data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105">
           <div className="flex">
             <img
               className=" rounded-full w-11 h-11 m-2 mt-3"

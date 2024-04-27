@@ -27,7 +27,8 @@ export default function App() {
       AOS.init({
         duration: 1500,
         easing: 'ease-in-out',
-        mirror: false
+        mirror: false,
+        disable: 'mobile'
       })
     });
     AOS.refresh();
