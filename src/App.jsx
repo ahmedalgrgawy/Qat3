@@ -59,7 +59,6 @@ export default function App() {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/single-product" element={<SingleProduct />}></Route>
-            <Route path="/bye" element={<Bye />}></Route>
           </Routes>
           <Newsletters />
           <Footer />
