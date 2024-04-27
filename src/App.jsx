@@ -27,7 +27,6 @@ export default function App() {
       AOS.init({
         duration: 1500,
         easing: 'ease-in-out',
-        once: true,
         mirror: false
       })
     });
