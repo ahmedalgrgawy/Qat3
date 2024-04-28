@@ -26,6 +26,7 @@ export default function App() {
       duration: 1500,
       easing: 'ease-in-out',
       mirror: false,
+      once: true,
     })
   }, []);
 

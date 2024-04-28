@@ -11,8 +11,6 @@ const Navbar = () => {
 
     const { signOut } = useAuth();
 
-
-
     const [isMenuOpen, setMenuOpen] = useState(false);
     const [isSearchOpen, setSearchOpen] = useState(false);
 
