@@ -12,6 +12,18 @@ const initialState = [
     {
         id: '3',
         reviewText: 'It was very good sale 3'
+    },
+    {
+        id: '4',
+        reviewText: 'It was very good sale 4'
+    },
+    {
+        id: '5',
+        reviewText: 'It was very good sale 5'
+    },
+    {
+        id: '6',
+        reviewText: 'It was very good sale 6'
     }
 ]
 
