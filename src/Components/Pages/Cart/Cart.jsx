@@ -38,11 +38,16 @@ export default function Cart() {
       setAmount3((prevAmount) => prevAmount - 1);
     }
   };
+
   let SubTotal1 = (amount1 * 120.55).toFixed(2);
+
   let SubTotal2 = (amount2 * 66.0).toFixed(2);
+
   let SubTotal3 = (amount3 * 150.3).toFixed(2);
-  let CartSubTotal =
-    parseFloat(SubTotal1) + parseFloat(SubTotal2) + parseFloat(SubTotal3);
+
+  let CartSubTotal = parseFloat(SubTotal1) + parseFloat(SubTotal2) + parseFloat(SubTotal3);
+
+
   return (
     <div>
       <h2 className="main-title my-28">Your Cart</h2>
@@ -50,12 +55,12 @@ export default function Cart() {
         <table className="border-2 w-full h-full">
           <thead>
             <tr className="border h-11">
-              <th>Remove</th>
-              <th>Image</th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Amount</th>
-              <th>Sub Total</th>
+              <td>Remove</td>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Price</td>
+              <td>Amount</td>
+              <td>Sub Total</td>
             </tr>
           </thead>
           <tbody>
@@ -91,72 +96,6 @@ export default function Cart() {
                 </button>
               </td>
               <td>${SubTotal1}</td>
-            </tr>
-            <tr>
-              <td>
-                <CiCircleRemove
-                  className="text-main"
-                  style={{
-                    marginBottom: "4%",
-                    marginLeft: "40%",
-                    cursor: "pointer",
-                  }}
-                />
-              </td>
-              <td className="flex justify-center">
-                <img
-                  className="md:h-20 w-28 rounded shadow-md mb-3"
-                  src={image2}
-                  alt=""
-                />
-              </td>
-              <td>Men&apos;s Fashion T-Shirt</td>
-              <td>$66.00</td>
-              <td>
-                <button onClick={handleDecrease2}>
-                  <LuMinus className="text-main" />
-                </button>
-                <span className="text-xl md:text-2xl">
-                  &nbsp;{amount2}&nbsp;
-                </span>
-                <button onClick={handleIncrease2}>
-                  <LuPlus className="text-main" />
-                </button>
-              </td>
-              <td>${SubTotal2}</td>
-            </tr>
-            <tr>
-              <td>
-                <CiCircleRemove
-                  className="text-main"
-                  style={{
-                    marginBottom: "4%",
-                    marginLeft: "40%",
-                    cursor: "pointer",
-                  }}
-                />
-              </td>
-              <td className="flex justify-center">
-                <img
-                  className="md:h-20 w-28 rounded shadow-md mb-3"
-                  src={image3}
-                  alt=""
-                />
-              </td>
-              <td>Men&apos;s Fashion T-Shirt</td>
-              <td>$150.30</td>
-              <td>
-                <button onClick={handleDecrease3}>
-                  <LuMinus className="text-main" />
-                </button>
-                <span className="text-xl md:text-2xl">
-                  &nbsp;{amount3}&nbsp;
-                </span>
-                <button onClick={handleIncrease3}>
-                  <LuPlus className="text-main" />
-                </button>
-              </td>
-              <td>${SubTotal3}</td>
             </tr>
           </tbody>
         </table>
