@@ -1,0 +1,50 @@
+@media (max-width: 850px) {
+  #contact {
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+  }
+  .contact-info {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #contact .map {
+    max-width: fit-content;
+  }
+  #contact-form {
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+  }
+  #contact-form .members {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 996px) and (min-width: 815px) {
+  #contact .map {
+    width: 600px;
+  }
+  #contact .contact-info h2 {
+    display: flex;
+  }
+}
+#contact-form form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid var(--bg-secondary-color);
+  resize: none;
+  color: var(--main-darker);
+}
+#contact-form .members h4 {
+  padding-left: 10px;
+  color: var(--secondary);
+  font-size: 13px;
+  margin: 0;
+  line-height: 25px;
+  text-transform: none;
+}
