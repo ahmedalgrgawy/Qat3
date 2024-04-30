@@ -21,18 +21,15 @@ import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 
 export default function App() {
-
   useEffect(() => {
-    window.addEventListener('load', () => {
-      AOS.init({
-        duration: 1500,
-        easing: 'ease-in-out',
-        once: true,
-        mirror: false
-      })
-    });
-    AOS.refresh();
+    AOS.init({
+      duration: 1500,
+      easing: 'ease-in-out',
+      mirror: false,
+      once: true,
+    })
   }, []);
+
 
   return (
 
