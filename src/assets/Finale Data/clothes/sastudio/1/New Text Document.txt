@@ -1,0 +1,5 @@
+Rahala Kimono
+price: 950.00 EGP
+
+Size
+S/M/L/XL
