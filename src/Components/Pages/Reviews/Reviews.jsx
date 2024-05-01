@@ -6,8 +6,6 @@ export default function Reviews() {
 
   const reviews = useSelector((state) => state.reviews.allReviews)
 
-  // console.log(reviews);
-
   return (
     <div>
       <div className="add-review container">

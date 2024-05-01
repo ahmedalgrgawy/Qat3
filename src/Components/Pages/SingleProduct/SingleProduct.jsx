@@ -1,5 +1,11 @@
 import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../features/cart/cartSlice';
+
+
 export default function SingleProduct() {
+
+    const dispatch = useDispatch()
 
     const product = useSelector(state => state.products.SingleProduct)
 
@@ -37,9 +43,17 @@ export default function SingleProduct() {
 
                                     </select>
 
-                                    <input type="number" min="1" className="mx-5 p-2 w-14 border-2 border-gray rounded-lg" />
-
-                                    <button className="ms-5 py-2 px-5 bg-main-darker text-white font-semibold rounded-lg shadow-md hover:bg-main focus:outline-none duration-300 ">Add To Cart</button>
+                                    <button className="ms-5 py-2 px-5 bg-main-darker text-white font-semibold rounded-lg shadow-md hover:bg-main focus:outline-none duration-300 "
+                                        onClick={() => dispatch(addToCart({
+                                            id: item.id,
+                                            price: item.price,
+                                            amount: 1,
+                                            totalPrice: item.price,
+                                            name: item.name,
+                                            color: item.color,
+                                            img: item.img,
+                                            text: item.text
+                                        }))}>Add To Cart</button>
                                 </div>
 
                                 <h2 className="mb-5 text-3xl font-bold">Product Details :</h2>
