@@ -5,7 +5,7 @@ const productSlice = createSlice({
     name: "products",
     initialState: {
         filteredProducts: JSON.parse(sessionStorage.getItem('filterData')),
-        SingleProduct: products,
+        SingleProduct: JSON.parse(sessionStorage.getItem('singleProduct')) || products,
         filterOn: false,
         error: false
     },
@@ -28,10 +28,26 @@ const productSlice = createSlice({
             } catch (err) {
                 return err;
             }
+        },
+        singleProduct(state, action) {
+            try {
+                const oneProduct = products.filter((product) => product.id === action.payload)
+
+                console.log(oneProduct);
+
+                state.SingleProduct = oneProduct;
+
+                const saveState = JSON.stringify(oneProduct);
+
+                sessionStorage.setItem('singleProduct', saveState)
+
+            } catch (error) {
+                return error;
+            }
         }
     }
 })
 
-export const { filterProduct } = productSlice.actions;
+export const { filterProduct, singleProduct } = productSlice.actions;
 
 export default productSlice.reducer;

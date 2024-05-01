@@ -1,6 +1,7 @@
 import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Sandreen from "../../../assets/Team/sandreen.jpg";
+import Ahmed from '../../../assets/Team/Ahmed.jfif'
 import "./Contact.css";
 
 
@@ -231,8 +232,8 @@ const Contact = () => {
                 style={{ borderRadius: "50%" }}
               >
                 <img
-                  src={Sandreen}
-                  alt="Sandreen"
+                  src={Ahmed}
+                  alt="Ahmed"
                   className="profile-pic inline my-0 mx-auto h-full w-auto"
                 />
               </div>
@@ -248,11 +249,11 @@ const Contact = () => {
                     letterSpacing: "0.5px",
                   }}
                 >
-                  Sandreen Kotb
+                  Ahmed Algrgawy
                 </span>
                 <h4>Front-End Developer</h4>
-                <h4>Phone : 01013851010</h4>
-                <h4>E-mail : sandreenkotb@gmail.com</h4>
+                <h4>Phone : 01067748430</h4>
+                <h4>E-mail : ahmedalgrgawy77@gmail.com</h4>
               </p>
             </div>
             <div
