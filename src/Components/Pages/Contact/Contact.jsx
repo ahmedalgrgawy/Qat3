@@ -1,11 +1,36 @@
 import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Sandreen from "../../../assets/Team/sandreen.jpg";
-import Ahmed from '../../../assets/Team/Ahmed.jfif'
+import Ahmed from "../../../assets/Team/Ahmed.jfif";
 import "./Contact.css";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_b0sz8kr", "template_sto6jpa", form.current, {
+        publicKey: "1PczDjoXIqfE2Anou",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
+  const notify = () => toast.success("Submitted Successfully!");
+
   return (
     <div className="container">
       <h2 className="main-title my-28 ">Contact</h2>
@@ -36,7 +61,11 @@ const Contact = () => {
             </h2>
             <div>
               <li
-                style={{ listStyle: "none", padding: "10px 0", display: "flex" }}
+                style={{
+                  listStyle: "none",
+                  padding: "10px 0",
+                  display: "flex",
+                }}
               >
                 <FaMap
                   style={{
@@ -57,7 +86,11 @@ const Contact = () => {
                 </p>
               </li>
               <li
-                style={{ listStyle: "none", padding: "10px 0", display: "flex" }}
+                style={{
+                  listStyle: "none",
+                  padding: "10px 0",
+                  display: "flex",
+                }}
               >
                 <MdEmail
                   style={{
@@ -78,7 +111,11 @@ const Contact = () => {
                 </p>
               </li>
               <li
-                style={{ listStyle: "none", padding: "10px 0", display: "flex" }}
+                style={{
+                  listStyle: "none",
+                  padding: "10px 0",
+                  display: "flex",
+                }}
               >
                 <FaPhoneAlt
                   style={{
@@ -98,7 +135,11 @@ const Contact = () => {
                 </p>
               </li>
               <li
-                style={{ listStyle: "none", padding: "10px 0", display: "flex" }}
+                style={{
+                  listStyle: "none",
+                  padding: "10px 0",
+                  display: "flex",
+                }}
               >
                 <FaClock
                   style={{
@@ -153,6 +194,8 @@ const Contact = () => {
               flexDirection: "column",
               alignItems: "flex-start",
             }}
+            ref={form}
+            onSubmit={sendEmail}
           >
             <span style={{ fontSize: "14px", color: "#9e9da2" }}>
               Leave A Message
@@ -169,20 +212,26 @@ const Contact = () => {
             >
               We Love To Hear From You
             </h2>
-            <input type="text" placeholder="Your Name" />
-            <input type="text" placeholder="Your Email" />
-            <input type="text" placeholder="Subject" />
+            <input type="text" name="from_name" placeholder="Your Name" />
+            <input type="text" name="user_email" placeholder="Your Email" />
             <textarea
-              name=""
+              name="message"
               id=""
               cols="30"
               rows="10"
               placeholder="Your Message"
             ></textarea>
-            <button className="button bg-main hover:bg-main-darker transition duration-300  text-white py-4 px-8 outline-none rounded-xl text-base tracking-wider">
+            <button
+              onClick={notify}
+              type="submit"
+              value="Send"
+              className="button bg-main hover:bg-main-darker transition duration-300  text-white py-4 px-8 outline-none rounded-xl text-base tracking-wider"
+            >
               Submit
             </button>
+            <ToastContainer position="bottom-right" color="#4f5e7b" />
           </form>
+
           <div className="members pl-5">
             <div
               style={{
