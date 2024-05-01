@@ -1,9 +1,9 @@
 import { nanoid } from "@reduxjs/toolkit"
-import mfn1 from "./clothes/Mfns/1/1.jpg"
-import mfn2 from "./clothes/Mfns/2/1.jpg"
-import mfn3 from "./clothes/Mfns/3/1.jpg"
-import mfn4 from "./clothes/Mfns/4/1.jpg"
-import mfn5 from "./clothes/Mfns/5/1.jpg"
+import mfn1 from "./clothes/Mfns/1/mfn1.jpg"
+import mfn2 from "./clothes/Mfns/2/mfn2.jpg"
+import mfn3 from "./clothes/Mfns/3/mfn3.webp"
+import mfn4 from "./clothes/Mfns/4/mfn4.jpg"
+import mfn5 from "./clothes/Mfns/5/mfn5.jpg"
 
 export const categories = ['Clothes', 'Makeup', 'Self Care', 'Shoes & bags']
 
@@ -24,7 +24,7 @@ export const products = [
         name: "STITCHED OLIVE SWEATPANTS",
         text: "The new MFNS Sweatpants are a sleek & seamless design for the perfect loose fit. Made from 100% Breathable Egyptian Cotton.",
         brand: "Mfns",
-        color: ["black", "gray", "green"],
+        color: ["black", "gray"],
         price: 850,
         category: 'clothes'
     },
@@ -54,9 +54,39 @@ export const products = [
         name: "BASIC OLIVE SWEATPANTS",
         text: "The new MFNS Sweatpants are a sleek & seamless design for the perfect loose fit. Made from 100% Breathable Egyptian Cotton.",
         brand: "Mfns",
-        color: ["black", "gray", "green"],
+        color: ["black", "gray"],
         price: 850,
         category: 'clothes'
+    },
+    {
+        id: nanoid(),
+        img: mfn5,
+        name: "BASIC OLIVE SWEATPANTS",
+        text: "The new MFNS Sweatpants are a sleek & seamless design for the perfect loose fit. Made from 100% Breathable Egyptian Cotton.",
+        brand: "Mfns",
+        color: ["black", "gray"],
+        price: 850,
+        category: 'makeup'
+    },
+    {
+        id: nanoid(),
+        img: mfn5,
+        name: "BASIC OLIVE SWEATPANTS",
+        text: "The new MFNS Sweatpants are a sleek & seamless design for the perfect loose fit. Made from 100% Breathable Egyptian Cotton.",
+        brand: "Mfns",
+        color: ["black", "gray"],
+        price: 850,
+        category: 'self care'
+    },
+    {
+        id: nanoid(),
+        img: mfn5,
+        name: "BASIC OLIVE SWEATPANTS",
+        text: "The new MFNS Sweatpants are a sleek & seamless design for the perfect loose fit. Made from 100% Breathable Egyptian Cotton.",
+        brand: "Mfns",
+        color: ["black", "gray"],
+        price: 850,
+        category: 'shoes & bags'
     },
 
 ]
