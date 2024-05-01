@@ -6,16 +6,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { filterProduct } from "../../../features/products/productSlice";
 import { NavLink } from "react-router-dom";
 import SingleProduct from "../SingleProduct/SingleProduct";
+import { addToCart } from "../../../features/cart/cartSlice";
 
 export default function Shop() {
 
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    const filterOn = useSelector((state) => state.products.filterOn)
+    const filterOn = useSelector((state) => state.products.filterOn);
 
-    let filteredProducts = useSelector((state) => state.products.filteredProducts)
+    let filteredProducts = useSelector((state) => state.products.filteredProducts);
 
-    const error = useSelector((state) => state.products.error)
+    const error = useSelector((state) => state.products.error);
 
     return (
         <div>
@@ -53,11 +54,22 @@ export default function Shop() {
                                                     </div>
                                                     <h4 className="pt-2.5 text-main-darker text-[16px] font-black">{product.price} <span className="text-[14px]">EGP</span></h4>
                                                 </div>
-                                                <button href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                                                    <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
-                                                </button>
+
                                             </div>
                                         </NavLink>
+                                        <button
+                                            onClick={() => dispatch(addToCart({
+                                                id: product.id,
+                                                price: product.price,
+                                                amount: 1,
+                                                totalPrice: product.price,
+                                                name: product.name,
+                                                color: product.color,
+                                                img: product.img,
+                                                text: product.text
+                                            }))} href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                                            <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
+                                        </button>
                                     </div>
                                 )
                             })
@@ -80,11 +92,21 @@ export default function Shop() {
                                                     </div>
                                                     <h4 className="pt-2.5 text-main-darker text-[16px] font-black">{product.price} <span className="text-[14px]">EGP</span></h4>
                                                 </div>
-                                                <button href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
-                                                    <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
-                                                </button>
                                             </div>
                                         </NavLink>
+                                        <button href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300"
+                                            onClick={() => dispatch(addToCart({
+                                                id: product.id,
+                                                price: product.price,
+                                                amount: 1,
+                                                totalPrice: product.price,
+                                                name: product.name,
+                                                color: product.color,
+                                                img: product.img,
+                                                text: product.text
+                                            }))}>
+                                            <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
+                                        </button>
                                     </div>
                                 )
                             })
