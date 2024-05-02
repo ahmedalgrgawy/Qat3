@@ -2,6 +2,8 @@ import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Sandreen from "../../../assets/Team/sandreen.jpg";
 import Ahmed from '../../../assets/Team/Ahmed.jfif'
+import zeyad from '../../../assets/Team/zeyad.jpeg'
+import mossa from '../../../assets/Team/mossa.jpeg'
 import "./Contact.css";
 
 
@@ -268,8 +270,8 @@ const Contact = () => {
                 style={{ borderRadius: "50%" }}
               >
                 <img
-                  src={Sandreen}
-                  alt="Sandreen"
+                  src={mossa}
+                  alt="mossa"
                   className="profile-pic inline my-0 mx-auto h-full w-auto"
                 />
               </div>
@@ -285,11 +287,11 @@ const Contact = () => {
                     letterSpacing: "0.5px",
                   }}
                 >
-                  Sandreen Kotb
+                  Ahmed Mossa
                 </span>
                 <h4>Front-End Developer</h4>
-                <h4>Phone : 01013851010</h4>
-                <h4>E-mail : sandreenkotb@gmail.com</h4>
+                <h4>Phone : 0127314612</h4>
+                <h4>E-mail : andahmed371@gmail.com</h4>
               </p>
             </div>
             <div
@@ -304,8 +306,8 @@ const Contact = () => {
                 style={{ borderRadius: "50%" }}
               >
                 <img
-                  src={Sandreen}
-                  alt="Sandreen"
+                  src={zeyad}
+                  alt="zeyad"
                   className="profile-pic inline my-0 mx-auto h-full w-auto"
                 />
               </div>
@@ -321,11 +323,11 @@ const Contact = () => {
                     letterSpacing: "0.5px",
                   }}
                 >
-                  Sandreen Kotb
+                  Zeyad Elkhamary
                 </span>
                 <h4>Front-End Developer</h4>
-                <h4>Phone : 01013851010</h4>
-                <h4>E-mail : sandreenkotb@gmail.com</h4>
+                <h4>Phone : 01012020327</h4>
+                <h4>E-mail : zelkhamary1@gmail.com</h4>
               </p>
             </div>
           </div>
