@@ -1,15 +1,11 @@
 import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Sandreen from "../../../assets/Team/sandreen.jpg";
-<<<<<<< HEAD
 import Ahmed from '../../../assets/Team/Ahmed.jfif'
 import zeyad from '../../../assets/Team/zeyad.jpeg'
 import mossa from '../../../assets/Team/mossa.jpeg'
-=======
-import Ahmed from "../../../assets/Team/Ahmed.jfif";
->>>>>>> 3cdbf4182f7d2d26c3e02f3691aed58354dbc849
 import "./Contact.css";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
