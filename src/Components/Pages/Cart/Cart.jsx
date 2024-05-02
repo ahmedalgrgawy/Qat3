@@ -13,6 +13,8 @@ export default function Cart() {
 
   const cart = useSelector((state) => state.cart.cart);
 
+  console.log(cart);
+
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
   const [shipping, setShipping] = useState(30);
@@ -27,7 +29,7 @@ export default function Cart() {
       <h2 className="main-title my-28">Your Cart</h2>
       <div className="container">
 
-        {cart.length ? (<table className="border-2 w-full h-full">
+        {cart.length > 0 ? (<table className="border-2 w-full h-full">
           <thead>
             <tr className="border h-11">
               <td>Remove</td>
@@ -45,7 +47,7 @@ export default function Cart() {
                   <td>
                     <CiCircleRemove
                       size={30}
-                      onClick={() => dispatch(removeFromCart(item))}
+                      onClick={() => dispatch(removeFromCart(item.id))}
                       className="text-main-darker hover:text-red-500 duration-300"
                       style={{
                         marginBottom: "4%",
@@ -74,7 +76,7 @@ export default function Cart() {
             )
           })}
         </table>) :
-          (<div>
+          (<div className="w-[50%] mx-auto p-4 bg-main text-white text-center rounded-full text-3xl">
             Your Cart Is Empty
           </div>)
         }

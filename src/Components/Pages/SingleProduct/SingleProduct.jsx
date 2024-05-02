@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../features/cart/cartSlice';
+import { useParams } from 'react-router-dom';
 
 
 export default function SingleProduct() {
@@ -9,16 +10,17 @@ export default function SingleProduct() {
 
     const product = useSelector(state => state.products.SingleProduct)
 
+    const { id } = useParams()
+
     return (
         <div>
-            <h2 className="main-title my-28">
-                productName
-            </h2>
-
-            <div className="container">
-                {product.map((item, index) => {
-                    return (
-                        <div key={index} className="single grid grid-cols-2 gap-5 items-center">
+            {product.filter((product => product.id === id)).map((item, index) => {
+                return (
+                    <div key={index}>
+                        <h2 className="main-title my-28">
+                            {item.brand}
+                        </h2>
+                        <div className="single grid grid-cols-2 gap-5 items-center container">
                             <div className="text-center w-[80%]">
                                 <img src={item.img} alt="main-picture" className="mb-5 w-full m-auto" />
                             </div>
@@ -63,9 +65,9 @@ export default function SingleProduct() {
                                 </p>
                             </div>
                         </div>
-                    )
-                })}
-            </div>
+                    </div>
+                )
+            })}
         </div>
     )
 }

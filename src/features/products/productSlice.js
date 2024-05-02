@@ -12,7 +12,6 @@ const productSlice = createSlice({
     reducers: {
         filterProduct(state, action) {
             try {
-
                 const filter = products.filter((product) => product.category.toLowerCase() === action.payload.toLowerCase())
 
                 state.filteredProducts = filter;
@@ -30,10 +29,9 @@ const productSlice = createSlice({
             }
         },
         singleProduct(state, action) {
+            console.log("aa");
             try {
                 const oneProduct = products.filter((product) => product.id === action.payload)
-
-                console.log(oneProduct);
 
                 state.SingleProduct = oneProduct;
 

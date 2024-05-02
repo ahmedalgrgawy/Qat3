@@ -82,7 +82,7 @@ import tatstore4 from "./Shoes & bags/tatstore/4/tatstore4.webp"
 import tatstore5 from "./Shoes & bags/tatstore/5/tatstore5.webp"
 
 
-export const categories = ['Clothes', 'makeup', 'self care', 'Shoes & bags']
+export const categories = ['Clothes', 'Makeup', 'Self Care', 'Shoes & bags']
 
 export const products = [
     {

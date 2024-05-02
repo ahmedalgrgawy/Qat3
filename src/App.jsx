@@ -55,7 +55,7 @@ export default function App() {
             <Route path="/reviews" element={<Reviews />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/single-product" element={<SingleProduct />}></Route>
+            <Route path="/single-product/:id" element={<SingleProduct />}></Route>
             <Route path="/bye" element={<Bye />}></Route>
           </Routes>
           <Newsletters />
