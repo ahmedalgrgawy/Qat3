@@ -1,9 +1,9 @@
 import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Sandreen from "../../../assets/Team/sandreen.jpg";
-import Ahmed from '../../../assets/Team/Ahmed.jfif'
-import zeyad from '../../../assets/Team/zeyad.jpeg'
-import mossa from '../../../assets/Team/mossa.jpeg'
+import Ahmed from "../../../assets/Team/Ahmed.jfif";
+import zeyad from "../../../assets/Team/zeyad.jpeg";
+import mossa from "../../../assets/Team/mossa.jpeg";
 import "./Contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
