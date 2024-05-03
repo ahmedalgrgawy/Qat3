@@ -38,8 +38,8 @@ export default function Shop() {
 
                         filteredProducts.map((product, index) => {
                             return (
-                                <div onClick={() => dispatch(scrollToTop())} key={index} data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
-                                    <NavLink to={`/single-product/${product.id}`}>
+                                <div key={index} data-aos='flip-down' className="product mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                                    <NavLink onClick={() => dispatch(scrollToTop())} to={`/single-product/${product.id}`}>
                                         <div onClick={() => dispatch(singleProduct(product.id))}>
                                             <div className="w-[70%] mx-auto my-auto">
                                                 <img className="w-full rounded-2xl" src={product.img} alt="" />
@@ -78,8 +78,8 @@ export default function Shop() {
                         : (
                             products.map((product, index) => {
                                 return (
-                                    <div onClick={() => dispatch(scrollToTop())} key={index} data-aos='flip-down' className="product h-full mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
-                                        <NavLink to={`/single-product/${product.id}`}  >
+                                    <div key={index} data-aos='flip-down' className="product h-full mt-14 w-[70%] md:w-[30%] lg:w-[22%] min-w-60 py-2 px-3 border border-main-darker rounded-3xl cursor-pointer shadow-2xl my-[15px] mx-0 duration-300 ease-in-out relative hover:scale-105">
+                                        <NavLink onClick={() => dispatch(scrollToTop())} to={`/single-product/${product.id}`}  >
                                             <div onClick={() => dispatch(singleProduct(product.id))}>
                                                 <div className="w-[70%] mx-auto my-auto">
                                                     <img className="w-full rounded-2xl" src={product.img} alt="" />

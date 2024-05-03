@@ -1,51 +1,65 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const updateData = (cart, amount, price) => {
+
+    sessionStorage.setItem('cart', JSON.stringify(cart))
+
+    sessionStorage.setItem('amount', JSON.stringify(amount))
+
+    sessionStorage.setItem('price', JSON.stringify(price))
+}
+
 const cartSlice = createSlice({
     name: 'cart',
     initialState: {
         cart: JSON.parse(sessionStorage.getItem('cart')) || [],
-        amount: 0,
-        totalAmount: 0,
-        totalPrice: 0,
-        shippingPrice: 0
+        totalAmount: JSON.parse(sessionStorage.getItem('amount')) || 0,
+        totalPrice: JSON.parse(sessionStorage.getItem('price')) || 0,
     },
     reducers: {
         addToCart: (state, action) => {
 
-            const productId = action.payload
+            const addedProduct = action.payload
+
+            console.log(addedProduct);
 
             try {
-                const exist = state.cart.find((product) => product.id === productId)
+                const exist = state.cart.find((product) => product.id === addedProduct.id)
 
                 if (exist) {
+
                     exist.amount++;
-                    exist.totalPrice += productId.price;
+
+                    exist.totalPrice += addedProduct.price;
+
                     state.totalAmount++;
-                    state.totalPrice += productId.totalPrice;
+
+                    state.totalPrice += addedProduct.totalPrice;
+
+                    updateData(state.cart, state.totalAmount, state.totalPrice)
+
                 } else {
+
                     state.cart.push({
-                        id: productId.id,
-                        price: productId.price,
+                        id: addedProduct.id,
+                        price: addedProduct.price,
                         amount: 1,
-                        totalPrice: productId.price,
-                        name: productId.name,
-                        color: productId.color,
-                        img: productId.img,
-                        text: productId.text
+                        totalPrice: addedProduct.price,
+                        name: addedProduct.name,
+                        color: addedProduct.color,
+                        img: addedProduct.img,
+                        text: addedProduct.text
                     })
+
                     state.totalAmount++;
-                    state.totalPrice += productId.price;
+
+                    state.totalPrice += addedProduct.price;
+
+                    updateData(state.cart, state.totalAmount, state.totalPrice)
+
                 }
 
-                if (state.totalPrice > 100) {
-                    state.shippingPrice = 30
-                } else if (state.totalPrice > 2000) {
-                    state.shippingPrice = 50
-                } else if (state.totalPrice > 3000) {
-                    state.shippingPrice = 50
-                } else {
-                    state.shippingPrice = 100
-                }
+
 
 
             } catch (error) {
@@ -54,19 +68,36 @@ const cartSlice = createSlice({
 
         },
         removeFromCart: (state, action) => {
-            const productId = action.payload
+
+            const addedProduct = action.payload
+
 
             try {
-                const exist = state.cart.find((product) => product.id === productId.id && product.size === productId.size && product.color === productId.color)
+
+                const exist = state.cart.find((product) => product.id === addedProduct.id)
+
                 if (exist.amount === 1) {
-                    state.cart = state.cart.filter((product) => product.id !== productId.id);
+
+                    state.cart = state.cart.filter((product) => product.id !== addedProduct.id);
+
                     state.totalAmount--;
-                    state.totalPrice -= productId.price;
+
+                    state.totalPrice -= addedProduct.price;
+
+                    updateData(state.cart, state.totalAmount, state.totalPrice)
+
                 } else {
+
                     exist.amount--;
-                    exist.totalPrice -= productId.price;
+
+                    exist.totalPrice -= addedProduct.price;
+
                     state.totalAmount--;
-                    state.totalPrice -= productId.price;
+
+                    state.totalPrice -= addedProduct.price;
+
+                    updateData(state.cart, state.totalAmount, state.totalPrice)
+
                 }
             } catch (error) {
                 return error;

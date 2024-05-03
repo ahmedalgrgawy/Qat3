@@ -3,6 +3,7 @@ import { useUser } from '@clerk/clerk-react';
 import "./Cart.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from "../../../features/cart/cartSlice";
+import { NavLink } from "react-router-dom";
 
 export default function Cart() {
 
@@ -14,7 +15,12 @@ export default function Cart() {
 
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-  const shippingPrice = useSelector((state) => state.cart.shippingPrice)
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+
+  const shippingPrice = 50;
+
+  const discount = "10 %";
+
 
   return (
     <div>
@@ -39,7 +45,7 @@ export default function Cart() {
                   <td>
                     <CiCircleRemove
                       size={30}
-                      onClick={() => dispatch(removeFromCart(item.id))}
+                      onClick={() => dispatch(removeFromCart(item))}
                       className="text-main-darker hover:text-red-500 duration-300"
                       style={{
                         marginBottom: "4%",
@@ -68,8 +74,9 @@ export default function Cart() {
             )
           })}
         </table>) :
-          (<div className="w-[50%] mx-auto p-4 bg-main text-white text-center rounded-full text-3xl">
-            Your Cart Is Empty
+          (<div className="w-[100%] md:w-[50%] mx-auto p-4 bg-main text-center md:rounded-full flex justify-center items-center flex-col ">
+            <span className="text-white text-2xl">Your Cart Is Empty </span>
+            <NavLink className={'text-green-500 p-3 bg-main-darker my-3 text-xl  rounded-full hover:bg-secondary hover:text-main-darker duration-300'} to={'/shop'}>Go Shopping</NavLink>
           </div>)
         }
 
@@ -80,9 +87,15 @@ export default function Cart() {
               <tbody>
                 <tr>
                   <th className="border-solid border-collapse border w-8 text-center p-4">
+                    Total Amount
+                  </th>
+                  <td className="border-2 w-36 p-4">{totalAmount}</td>
+                </tr>
+                <tr>
+                  <th className="border-solid border-collapse border w-8 text-center p-4">
                     Cart Subtotal
                   </th>
-                  <td className="border-2 w-36 p-4">{totalPrice} EGP</td>
+                  <td className="border-2 w-36 p-4">{Math.floor(totalPrice)} EGP</td>
                 </tr>
                 <tr className="border-y-2">
                   <th className="border-solid border-collapse border w-8 px-8 text-center p-4">
@@ -90,11 +103,17 @@ export default function Cart() {
                   </th>
                   <td className="border-2 p-4">{shippingPrice} EGP</td>
                 </tr>
+                <tr className="border-y-2">
+                  <th className="border-solid border-collapse border w-8 px-8 text-center p-4">
+                    Discount
+                  </th>
+                  <td className="border-2 p-4">{discount}</td>
+                </tr>
                 <tr className="border-y-2 p-4">
                   <th className="border-solid border-collapse border w-8 px-8 text-center p-4">
                     Total
                   </th>
-                  <td className="border-2 p-4">{totalPrice + shippingPrice} EGP</td>
+                  <td className="border-2 p-4">{Math.floor((totalPrice + shippingPrice) * 0.9)} EGP</td>
                 </tr>
               </tbody>
             </table>
