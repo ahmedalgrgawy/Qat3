@@ -1,5 +1,5 @@
-import background from "../../../assets/img/123.jpeg";
-import button from "../../../assets/img/button.png";
+import background from "../../../assets/imgs/landing.jpeg";
+import button from "../../../assets/imgs/button.png";
 import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {

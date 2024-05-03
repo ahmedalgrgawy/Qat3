@@ -1,15 +1,15 @@
-import logoImg from "../../../assets/logo3.png"
-import appStore from "../../../assets/app.jpg"
-import playStore from "../../../assets/play.jpg"
-import payImg from "../../../assets/pay.png"
+import appStore from "../../../assets/logos/app.jpg"
+import playStore from "../../../assets/logos/play.jpg"
+import payImg from "../../../assets/logos/pay.png"
 import { BsFacebook, BsInstagram, BsTwitterX } from "react-icons/bs"
 import { NavLink } from "react-router-dom"
+import { logos } from "../../../assets/data"
 
 export default function Footer() {
   return (
     <footer className="px-[40px] pt-[60px] pb-[20px] bg-main text-white flex justify-between flex-wrap">
       <div data-aos='zoom-in' data-aos-delay='300' className="col">
-        <img src={logoImg} className="logo w-[100px] rounded-full mb-8" alt="" />
+        <img src={logos.logoThree} className="logo w-[100px] rounded-full mb-8" alt="" />
         <p className="text-[14px] mb-6"><strong>Address: </strong> 25 Alex Road, Street 20, Cairo</p>
         <p className="text-[14px] mb-6"><strong>Phone: </strong> +045 3333333 || 01067748430</p>
         <p className="text-[14px] mb-6"><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import introPageImg from '../../../assets/landing-image.png'
+import introPageImg from '../../../assets/imgs/intro.png'
 
 
 function IntroPage() {

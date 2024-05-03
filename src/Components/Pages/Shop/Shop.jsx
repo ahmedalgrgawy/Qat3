@@ -1,12 +1,11 @@
 import { FaCircle } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa"
-import { categories } from "../../../assets/Finale Data/data";
-import { products } from "../../../assets/Finale Data/data";
 import { useDispatch, useSelector } from 'react-redux';
 import { filterProduct, singleProduct } from "../../../features/products/productSlice";
 import { NavLink } from "react-router-dom";
 import { addToCart } from "../../../features/cart/cartSlice";
 import { scrollToTop } from "../../../features/main/mainSlice";
+import { categories, products } from "../../../assets/data";
 
 export default function Shop() {
 

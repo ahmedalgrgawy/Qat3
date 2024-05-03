@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './Navbar.css';
-import logoNav from '../../../assets/logo3.png';
 import { FaSearch, FaShoppingCart, FaBars } from 'react-icons/fa';
 import { AiOutlineClose } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
@@ -8,6 +7,7 @@ import { PiSignOutBold } from "react-icons/pi";
 import { useAuth, UserButton } from '@clerk/clerk-react';
 import { useDispatch } from 'react-redux';
 import { scrollToTop } from '../../../features/main/mainSlice';
+import { logos } from '../../../assets/data';
 
 const Navbar = () => {
 
@@ -38,7 +38,7 @@ const Navbar = () => {
         <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center px-[20px] py-[30px]">
                 <NavLink to={"/"} onClick={() => dispatch(scrollToTop())} >
-                    <img src={logoNav} className="nav-logo h-14" alt="Logo" />
+                    <img src={logos.logoThree} className="nav-logo h-14" alt="Logo" />
                 </NavLink>
 
                 <div

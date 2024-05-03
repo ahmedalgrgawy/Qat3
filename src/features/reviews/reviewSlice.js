@@ -1,4 +1,4 @@
-import randomImg from "../../assets/r_img/image1.jpeg"
+import randomImg from "../../assets/imgs/image9.jpeg"
 import { createSlice, nanoid } from '@reduxjs/toolkit'
 
 const initialStates = [

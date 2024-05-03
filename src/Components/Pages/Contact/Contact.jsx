@@ -1,14 +1,11 @@
 import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Sandreen from "../../../assets/Team/sandreen.jpg";
-import Ahmed from "../../../assets/Team/Ahmed.jfif";
-import zeyad from "../../../assets/Team/zeyad.jpeg";
-import mossa from "../../../assets/Team/mossa.jpeg";
 import "./Contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Team } from "../../../assets/data";
 
 const Contact = () => {
   const form = useRef();
@@ -234,150 +231,46 @@ const Contact = () => {
           </form>
 
           <div className="members pl-5">
-            <div
-              style={{
-                display: "flex",
-                paddingBottom: "25px",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="team w-24 h-24 relative overflow-hidden "
-                style={{ borderRadius: "50%" }}
-              >
-                <img
-                  src={Sandreen}
-                  alt="Sandreen"
-                  className="profile-pic inline my-0 mx-auto h-full w-auto"
-                />
-              </div>
-
-              <p style={{}}>
-                <span
+            {Team.map((index, member) => {
+              return (
+                <div key={index}
                   style={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    color: "#4f5e7b",
-                    paddingLeft: "10px",
                     display: "flex",
-                    letterSpacing: "0.5px",
+                    paddingBottom: "25px",
+                    alignItems: "center",
                   }}
                 >
-                  Sandreen Kotb
-                </span>
-                <h4>Front-End Developer</h4>
-                <h4>Phone : 01013851010</h4>
-                <h4>E-mail : sandreenkotb@gmail.com</h4>
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                paddingBottom: "25px",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="team w-24 h-24 relative overflow-hidden "
-                style={{ borderRadius: "50%" }}
-              >
-                <img
-                  src={Ahmed}
-                  alt="Ahmed"
-                  className="profile-pic inline my-0 mx-auto h-full w-auto"
-                />
-              </div>
+                  <div
+                    className="team w-24 h-24 relative overflow-hidden "
+                    style={{ borderRadius: "50%" }}
+                  >
+                    <img
+                      src={member.img}
+                      alt={member.name}
+                      className="profile-pic inline my-0 mx-auto h-full w-auto"
+                    />
+                  </div>
 
-              <p style={{}}>
-                <span
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    color: "#4f5e7b",
-                    paddingLeft: "10px",
-                    display: "flex",
-                    letterSpacing: "0.5px",
-                  }}
-                >
-                  Ahmed Algrgawy
-                </span>
-                <h4>Front-End Developer</h4>
-                <h4>Phone : 01067748430</h4>
-                <h4>E-mail : ahmedalgrgawy77@gmail.com</h4>
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                paddingBottom: "25px",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="team w-24 h-24 relative overflow-hidden "
-                style={{ borderRadius: "50%" }}
-              >
-                <img
-                  src={mossa}
-                  alt="mossa"
-                  className="profile-pic inline my-0 mx-auto h-full w-auto"
-                />
-              </div>
-
-              <p style={{}}>
-                <span
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    color: "#4f5e7b",
-                    paddingLeft: "10px",
-                    display: "flex",
-                    letterSpacing: "0.5px",
-                  }}
-                >
-                  Ahmed Mossa
-                </span>
-                <h4>Front-End Developer</h4>
-                <h4>Phone : 0127314612</h4>
-                <h4>E-mail : andahmed371@gmail.com</h4>
-              </p>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                paddingBottom: "25px",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="team w-24 h-24 relative overflow-hidden "
-                style={{ borderRadius: "50%" }}
-              >
-                <img
-                  src={zeyad}
-                  alt="zeyad"
-                  className="profile-pic inline my-0 mx-auto h-full w-auto"
-                />
-              </div>
-
-              <p style={{}}>
-                <span
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: "bold",
-                    color: "#4f5e7b",
-                    paddingLeft: "10px",
-                    display: "flex",
-                    letterSpacing: "0.5px",
-                  }}
-                >
-                  Zeyad Elkhamary
-                </span>
-                <h4>Front-End Developer</h4>
-                <h4>Phone : 01012020327</h4>
-                <h4>E-mail : zelkhamary1@gmail.com</h4>
-              </p>
-            </div>
+                  <p style={{}}>
+                    <span
+                      style={{
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                        color: "#4f5e7b",
+                        paddingLeft: "10px",
+                        display: "flex",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      {member.name}
+                    </span>
+                    <h4>Front-End Developer</h4>
+                    <h4>Phone : {member.phone}</h4>
+                    <h4>E-mail : {member.email}</h4>
+                  </p>
+                </div>
+              )
+            })}
           </div>
         </section>
       </div>

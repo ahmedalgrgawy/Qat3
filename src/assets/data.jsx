@@ -80,6 +80,49 @@ import tatstore2 from "./Shoes & bags/tatstore/2/tatstore2.webp"
 import tatstore3 from "./Shoes & bags/tatstore/3/tatstore3.webp"
 import tatstore4 from "./Shoes & bags/tatstore/4/tatstore4.webp"
 import tatstore5 from "./Shoes & bags/tatstore/5/tatstore5.webp"
+import sandreen from './Team/sandreen.jpg'
+import Ahmed from './Team/Ahmed.jfif'
+import mossa from './Team/mossa.jpeg'
+import zeyad from './Team/zeyad.jpeg'
+import AppVideo from './App Video/App.mp4'
+import logo1 from "./logos/logo1.png"
+import logo2 from "./logos/logo2.png"
+import logo3 from "./logos/logo3.png"
+
+export const Team = [
+    {
+        name: 'Sandreen Kotb',
+        img: sandreen,
+        email: "sandreenkotb@gmail.com",
+        phone: "01013851010",
+    },
+    {
+        name: 'Ahmed Algrgawy',
+        img: Ahmed,
+        email: "ahmedalgrgawy77@gmail.com<",
+        phone: "01067748430",
+    },
+    {
+        name: 'Ahmed Mossa',
+        img: mossa,
+        email: "andahmed371@gmail.com",
+        phone: "0127314612",
+    },
+    {
+        name: 'Zeyad Elkhamary',
+        img: zeyad,
+        email: "zelkhamary1@gmail.com",
+        phone: "01012020327",
+    }
+]
+
+export const App = { video: AppVideo };
+
+export const logos = {
+    logoOne: logo1,
+    logoTwo: logo2,
+    logoThree: logo3,
+}
 
 
 export const categories = ['Clothes', 'Makeup', 'Self Care', 'Shoes & bags']
@@ -895,5 +938,77 @@ export const products = [
         color: ["#eee", "black"],
         price: 550,
         category: 'shoes & bags'
+    },
+]
+
+export const latestProducts = [
+    {
+        img: rosastore3,
+        name: "Wide Hook & Loop Sneakers",
+        text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do, size 37",
+        brand: "Rosastore",
+        color: ["#eee", "black"],
+        price: 480,
+        category: 'shoes & bags'
+    }, {
+        img: tatstore2,
+        name: "SerenitySoul Mini CrossLeather Bag",
+        text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        brand: "Tatstore",
+        color: ["green"],
+        price: 750,
+        category: 'shoes & bags'
+    }, {
+        img: glimmeringcosmetics2,
+        name: "Cosmetic Bag Glitter Toiletry Pouch Sequin makeup Bag Travel makeup Toiletry",
+        text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
+        brand: "glimmering cosetics",
+        color: ["pink"],
+        price: 8.15,
+        category: 'makeup'
+    },
+    {
+        img: glimmeringcosmetics3,
+        name: "makeup Bag, Purple Brushed Metal Silver Glitter Travel Cosmetic Bag makeup Organizer Case Large Capacity Portable Zipper Toiletry Bag for Women",
+        text: "Its with sturdy metal zipper, exquisite workmanship,the premium quality design ensures thezippers glide very smoothly and don't get caught in the corners.This makeup Bag have enough space to storage your makeup and cosmetic accessories, likelipstick, lip gloss, makeup brushes, eyeshadow, makeup palettes, hairbrushes, skin careproducts, nail polish, nail art tools, shampoo and so on. Multifunctional makeup bag that can be used as cosmetic bag,travel makeup bag,washbag,storage bag,toiletry bag.Perfect for daily use or travel. It is a wonderful gift for your daughter, wife, girlfriend, friend.",
+        brand: "glimmering cosetics",
+        color: ["silver", "black ", "sparkle"],
+        price: 23.99,
+        category: 'makeup'
+    }, {
+        img: infuse1,
+        name: "Women's Casual Open Front Button Long Sleeve Knit Pocket Lightweight Cardigan",
+        text: "50% viscose yarn, 28% polyamide, 22% polyester, the fabric is soft and comfortable with elasticity.Round neck can visually show your neck line better, the cuffs and hem are threaded design, which can fit your skin better; there is a pocket on each side of the front side, you are able to put some belongings, like cell phone, keys, change, etc., it is very convenient. Perfect for spring, fall and winter, can be worn at work, dating, travel, study, church, shopping and other situations, this cardigan can also be very good with your home fashion items, tops can be paired with T-shirts, camisoles or tank tops, pants can be paired with jeans, skirts, leggings, etc., all very versatile.A total of five sizes: S-XXL, there are many kinds of colors to choose from, black and white is in the match will not go wrong, but other colors such as grey, red, pink and so on are also very good, can be very good with clothes.clothes are size is measured by hand, there may be 0.4-0.8 inch error, please refer to the size guide before purchase, thank you",
+        brand: "infuse",
+        color: ["pink"],
+        price: 34.99,
+        category: 'clothes'
+    },
+    {
+        img: infuse2,
+        name: "Women's Lightweight Crew Neck Button Down Long Sleeve Cardigan Knit Open Front Sweater",
+        text: "Fabric typeGeneral,Care instructionsMachine Wash,OriginImported,Closure typeButton.40% polayamide, 35% viscose, 15% microfiber, 10% elastane, lightweight and breathable, good elasticity.The button design makes the dress more fashionable, can be used as inner wear or as a jacket; knitted hollow design is more breathable and not stuffy; the threaded part of the cuffs can modify your arm line.All seasons can be worn, summer in the lower temperature of the air-conditioned room is a good jacket with; can also be worn at work, dating, traveling, studying, church, shopping and other occasions.",
+        brand: "infuse",
+        color: ["blue"],
+        price: 32.99,
+        category: 'clothes'
+    },
+    {
+        img: rawafrican1,
+        name: "Raw African Follicle Booster",
+        text: "This oil is designed to transform your hair care routine because the infusion of rosemary oil stimulates the hair follicles. Also, promoting thicker and healthier hair growth.Additionally, sweet almond oil nourishes and strengthens the hair, leaving it silky and lustrous. The inclusion of flaxseed oil in the Follicle Booster oil helps to reduce hair fall and breakage, ensuring that your locks remain strong and resilient.Hence, With regular use of Raw African Follicle Booster oil it will encourage the growth of baby hairs, resulting in a fuller and more voluminous mane.Experience the transformative effects of the Follicle Booster oil and say goodbye to hair concerns while embracing a a more confident version of you!  ",
+        brand: "Raw african",
+        color: ["grey"],
+        price: 235,
+        category: 'self care'
+    },
+    {
+        img: rawafrican2,
+        name: "Raw African Follicle Booster Eyebrows",
+        text: "The Raw African Follicle Booster Eyebrows Edition is inspired after our best seller the Follicle Booster oil that has proven its effeciency in promoting healthy hair growth and stimulating hair  Follicles.You asked for an Eyebrows version that is more safer on the eye area and the skin, and we Listned!The Raw African Follicle Booster Eyebrows is a blend of beneficial oils, including sweet almond and rosemary, Almond oil, Pumpkin oil, and Argan oil. Most Importantly, They are known for their nourishing and growth properties that promotes natural and healthy eyebrow growth.Also, The Raw African Follicle Booster Eyebrows nourishes and moisturizes eyebrows from the roots to stimulate hair growth. As a result, you will enjoy thicker and fuller eyebrows in no time!Usage: Apply a small amount of RawAfrican Follicle Booster Eyebrows to your eye brows and gently massage for two minutes. Leave the product for 30 minutes to one hour before washing them with soap or a makeup remover. Use the product twice a week for best results. * DO NOT LEAVE OVERNIGHT! Additional Information:* Size: Approx. 15ml / 0.5 FL OZ* This product is free of harsh chemicals like parabens, sulfates, or mineral oils.* We never test our products on animals and we don’t deal with suppliers who test their products on animals.",
+        brand: "Raw african",
+        color: ["grey"],
+        price: 120,
+        category: 'self care'
     },
 ]

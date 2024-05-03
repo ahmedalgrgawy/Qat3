@@ -1,6 +1,5 @@
-import App from "../../../assets/Finale Data/App.mp4"
-import logo from "../../../assets/logo1.png"
-
+import App from "../../../App";
+import { logos } from "../../../assets/data";
 
 export default function About() {
     return (
@@ -10,7 +9,7 @@ export default function About() {
             </h2>
             <div className="container flex justify-around gap-10 items-center mb-20 mx-auto">
                 <div className="w-[30%]">
-                    <img src={logo} alt="Qat3" />
+                    <img src={logos.logoOne} alt="Qat3" />
                 </div>
                 <div className=" w-[65%] p-10">
                     <h2 className="text-5xl font-bold mb-5">Why Choose Qat3?</h2>
@@ -28,7 +27,7 @@ export default function About() {
                 <h1 className="text-4xl font-bold my-5">Download Our <a className="cursor-pointer underline decoration-5 text-sky-800">App</a></h1>
 
                 <div className="w-[30%]">
-                    <video loop autoPlay src={App} alt="App" className="mx-auto" />
+                    <video loop autoPlay src={App.video} alt="App" className="mx-auto" />
                 </div>
 
             </div>
