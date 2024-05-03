@@ -56,7 +56,6 @@ export default function Shop() {
                                                 </div>
                                                 <h4 className="pt-2.5 text-main-darker text-[16px] font-black">{product.price} <span className="text-[14px]">EGP</span></h4>
                                             </div>
-
                                         </div>
                                     </NavLink>
                                     <button
