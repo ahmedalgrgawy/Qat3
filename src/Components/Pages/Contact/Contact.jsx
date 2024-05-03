@@ -22,7 +22,6 @@ const Contact = () => {
       })
       .then(
         (result) => {
-          console.log(result.text);
           console.log("message sent");
           e.target.reset();
         },

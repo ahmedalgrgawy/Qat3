@@ -21,8 +21,6 @@ const cartSlice = createSlice({
 
             const addedProduct = action.payload
 
-            console.log(addedProduct);
-
             try {
                 const exist = state.cart.find((product) => product.id === addedProduct.id)
 
@@ -59,9 +57,6 @@ const cartSlice = createSlice({
 
                 }
 
-
-
-
             } catch (error) {
                 return error
             }
@@ -70,7 +65,6 @@ const cartSlice = createSlice({
         removeFromCart: (state, action) => {
 
             const addedProduct = action.payload
-
 
             try {
 
