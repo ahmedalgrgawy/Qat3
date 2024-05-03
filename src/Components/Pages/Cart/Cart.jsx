@@ -1,6 +1,5 @@
 import { CiCircleRemove } from "react-icons/ci";
 import { useUser } from '@clerk/clerk-react';
-import { useState } from "react";
 import "./Cart.css";
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart } from "../../../features/cart/cartSlice";
@@ -13,16 +12,9 @@ export default function Cart() {
 
   const cart = useSelector((state) => state.cart.cart);
 
-  console.log(cart);
-
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
-  const [shipping, setShipping] = useState(30);
-
-  if (totalPrice > 2000) {
-    setShipping(50)
-  }
-
+  const shippingPrice = useSelector((state) => state.cart.shippingPrice)
 
   return (
     <div>
@@ -96,13 +88,13 @@ export default function Cart() {
                   <th className="border-solid border-collapse border w-8 px-8 text-center p-4">
                     Shipping
                   </th>
-                  <td className="border-2 p-4">{shipping}EGP</td>
+                  <td className="border-2 p-4">{shippingPrice} EGP</td>
                 </tr>
                 <tr className="border-y-2 p-4">
                   <th className="border-solid border-collapse border w-8 px-8 text-center p-4">
                     Total
                   </th>
-                  <td className="border-2 p-4">{totalPrice + shipping}</td>
+                  <td className="border-2 p-4">{totalPrice + shippingPrice} EGP</td>
                 </tr>
               </tbody>
             </table>

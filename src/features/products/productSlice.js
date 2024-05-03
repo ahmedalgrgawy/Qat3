@@ -29,7 +29,6 @@ const productSlice = createSlice({
             }
         },
         singleProduct(state, action) {
-            console.log("aa");
             try {
                 const oneProduct = products.filter((product) => product.id === action.payload)
 

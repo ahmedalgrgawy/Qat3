@@ -6,7 +6,8 @@ const cartSlice = createSlice({
         cart: JSON.parse(sessionStorage.getItem('cart')) || [],
         amount: 0,
         totalAmount: 0,
-        totalPrice: 0
+        totalPrice: 0,
+        shippingPrice: 0
     },
     reducers: {
         addToCart: (state, action) => {
@@ -36,7 +37,15 @@ const cartSlice = createSlice({
                     state.totalPrice += productId.price;
                 }
 
-                
+                if (state.totalPrice > 100) {
+                    state.shippingPrice = 30
+                } else if (state.totalPrice > 2000) {
+                    state.shippingPrice = 50
+                } else if (state.totalPrice > 3000) {
+                    state.shippingPrice = 50
+                } else {
+                    state.shippingPrice = 100
+                }
 
 
             } catch (error) {
