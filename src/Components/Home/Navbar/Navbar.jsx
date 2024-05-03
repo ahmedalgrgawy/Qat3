@@ -6,8 +6,12 @@ import { AiOutlineClose } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
 import { PiSignOutBold } from "react-icons/pi";
 import { useAuth, UserButton } from '@clerk/clerk-react';
+import { useDispatch } from 'react-redux';
+import { scrollToTop } from '../../../features/main/mainSlice';
 
 const Navbar = () => {
+
+    const dispatch = useDispatch()
 
     const { signOut } = useAuth();
 
@@ -30,18 +34,10 @@ const Navbar = () => {
         setSearchOpen(false);
     };
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-        });
-    };
-
-
     return (
         <div className="header fixed top-0 left-0 w-full bg-white" id="header">
             <nav className="nav-container h-14 flex justify-between items-center px-[20px] py-[30px]">
-                <NavLink to={"/"} onClick={scrollToTop} >
+                <NavLink to={"/"} onClick={() => dispatch(scrollToTop())} >
                     <img src={logoNav} className="nav-logo h-14" alt="Logo" />
                 </NavLink>
 
@@ -51,27 +47,27 @@ const Navbar = () => {
                 >
                     <ul className="nav-list flex gap-x-6 text-center">
                         <li className="nav-item ">
-                            <NavLink onClick={scrollToTop} to={"/"} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={() => dispatch(scrollToTop())} to={"/"} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink onClick={scrollToTop} to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={() => dispatch(scrollToTop())} to={'/about'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 About
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink onClick={scrollToTop} to={'/shop'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={() => dispatch(scrollToTop())} to={'/shop'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Shop
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink onClick={scrollToTop} to={'/reviews'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={() => dispatch(scrollToTop())} to={'/reviews'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Reviews
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink onClick={scrollToTop} to={'/contact'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
+                            <NavLink onClick={() => dispatch(scrollToTop())} to={'/contact'} className={({ isActive }) => isActive ? "active nav-link text-main" : "nav-link text-main"}>
                                 Contact
                             </NavLink>
                         </li>
@@ -91,7 +87,7 @@ const Navbar = () => {
                         id="search-btn"
                         onClick={handleSearchToggle}
                     />
-                    <NavLink onClick={scrollToTop} to={"/cart"}>
+                    <NavLink onClick={() => dispatch(scrollToTop())} to={"/cart"}>
                         <FaShoppingCart className="cart" id="cart" />
                     </NavLink>
 

@@ -17,15 +17,15 @@ export default function SingleProduct() {
             {product.filter((product => product.id === id)).map((item, index) => {
                 return (
                     <div key={index}>
-                        <h2 className="main-title my-28">
+                        <h2 data-aos='fade-down' className="main-title my-28">
                             {item.brand}
                         </h2>
                         <div className="single grid grid-cols-2 gap-5 items-center container">
-                            <div className="text-center w-[80%]">
+                            <div data-aos='fade-left' className="text-center w-[80%]">
                                 <img src={item.img} alt="main-picture" className="mb-5 w-full m-auto" />
                             </div>
 
-                            <div className="">
+                            <div data-aos='fade-right'>
                                 <p className="mb-5 text-base text-black-900">{item.category}</p>
 
                                 <h4 className="text-3xl font-semibold">{item.name}</h4>
