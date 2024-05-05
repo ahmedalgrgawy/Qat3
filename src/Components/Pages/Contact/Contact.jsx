@@ -40,9 +40,10 @@ const Contact = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
+            gap: "15px",
           }}
         >
-          <div className="contact-info pl-14">
+          <div className="contact-info ">
             <span style={{ fontSize: "14px", color: "#9e9da2" }}>
               Get In Touch
             </span>
@@ -51,7 +52,6 @@ const Contact = () => {
                 lineHeight: "35px",
                 fontSize: "26px",
                 padding: "5px 0",
-                width: "50%",
                 margin: "0",
                 color: "#3b4356",
               }}
@@ -160,7 +160,7 @@ const Contact = () => {
               </li>
             </div>
           </div>
-          <div className="map flex items-center justify-between pt-2.5 pr-4 w-full h-full">
+          <div className="map flex items-center justify-between pt-2.5 w-full h-full">
             <iframe
               width="650"
               height="400"
@@ -180,7 +180,7 @@ const Contact = () => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            margin: "30px",
+            marginTop: "30px",
             padding: "40px",
             border: "1px solid #bebfc4",
           }}
@@ -188,7 +188,7 @@ const Contact = () => {
           <form
             action=""
             style={{
-              width: "65%",
+              width: "60%",
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-start",
@@ -234,7 +234,8 @@ const Contact = () => {
           <div className="members pl-5">
             {Team.map((member, index) => {
               return (
-                <div key={index}
+                <div
+                  key={index}
                   style={{
                     display: "flex",
                     paddingBottom: "25px",
@@ -270,7 +271,7 @@ const Contact = () => {
                     <h4>E-mail : {member.email}</h4>
                   </p>
                 </div>
-              )
+              );
             })}
           </div>
         </section>
