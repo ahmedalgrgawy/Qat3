@@ -1,5 +1,4 @@
-import App from "../../../App";
-import { logos } from "../../../assets/data";
+import { AboutVideo, logos } from "../../../assets/data";
 
 export default function About() {
     return (
@@ -27,7 +26,7 @@ export default function About() {
                 <h1 className="text-4xl font-bold my-5">Download Our <a className="cursor-pointer underline decoration-5 text-sky-800">App</a></h1>
 
                 <div className="w-[30%]">
-                    <video loop autoPlay src={App.video} alt="App" className="mx-auto" />
+                    <video loop autoPlay src={AboutVideo.video} alt="App" className="mx-auto" />
                 </div>
 
             </div>

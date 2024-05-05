@@ -116,7 +116,7 @@ export const Team = [
     }
 ]
 
-export const App = { video: AppVideo };
+export const AboutVideo = { video: AppVideo };
 
 export const logos = {
     logoOne: logo1,
