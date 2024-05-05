@@ -26,7 +26,7 @@ export default function Cart() {
         {cart.length > 0 ? (
           <table className="border-2 w-full h-full">
             <thead>
-              <tr className="border h-11">
+              <tr className="border h-11 text-center">
                 <td>Remove</td>
                 <td>Product</td>
                 <td>Name</td>
@@ -37,7 +37,7 @@ export default function Cart() {
             </thead>
             {cart.map((item, index) => {
               return (
-                <tbody key={index}>
+                <tbody className="text-center" key={index}>
                   <tr>
                     <td>
                       <CiCircleRemove
