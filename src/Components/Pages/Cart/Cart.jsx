@@ -1,6 +1,5 @@
 import { CiCircleRemove } from "react-icons/ci";
 import { useUser } from "@clerk/clerk-react";
-import "./Cart.css";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../../../features/cart/cartSlice";
 import { NavLink } from "react-router-dom";
