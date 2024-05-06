@@ -7,6 +7,7 @@ import { useRef } from "react";
 // import "react-toastify/dist/ReactToastify.css";
 import { Team } from "../../../assets/data";
 
+
 const Contact = () => {
   const form = useRef();
 
@@ -231,7 +232,7 @@ const Contact = () => {
           </form>
 
           <div className="members pl-5">
-            {Team.map((index, member) => {
+            {Team.map((member, index) => {
               return (
                 <div
                   key={index}
