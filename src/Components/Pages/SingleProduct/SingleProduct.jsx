@@ -20,12 +20,12 @@ export default function SingleProduct() {
                         <h2 data-aos='fade-down' className="main-title my-28">
                             {item.brand}
                         </h2>
-                        <div className="single grid grid-cols-2 gap-5 items-center container">
-                            <div data-aos='fade-left' className="text-center w-[80%]">
+                        <div className="single grid lg:grid-cols-2 gap-5 items-center container ">
+                            <div data-aos='fade-left' className="text-center mx-auto w-[100%] sm:w-[80%] ">
                                 <img src={item.img} alt="main-picture" className="mb-5 w-full m-auto" />
                             </div>
 
-                            <div data-aos='fade-right'>
+                            <div className='text-center lg:text-start lg:w-[100%]' data-aos='fade-right'>
                                 <p className="mb-5 text-base text-black-900">{item.category}</p>
 
                                 <h4 className="text-3xl font-semibold">{item.name}</h4>

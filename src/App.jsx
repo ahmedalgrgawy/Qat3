@@ -13,22 +13,22 @@ import Newsletters from "./Components/Home/Newsletters/Newsletters";
 import SingleProduct from "./Components/Pages/SingleProduct/SingleProduct"
 import IntroPage from "./Components/AuthPages/IntroPage/IntroPage"
 import Bye from "./Components/AuthPages/Bye/Bye";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from 'react';
+// import AOS from "aos";
+// import "aos/dist/aos.css";
+// import { useEffect } from 'react';
 import ScrollButton from "./Components/Home/ScrollButton/ScrollButton ";
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 
 export default function App() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      easing: 'ease-in-out',
-      mirror: false,
-      once: true,
-    })
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1500,
+  //     easing: 'ease-in-out',
+  //     mirror: false,
+  //     once: true,
+  //   })
+  // }, []);
 
 
   return (
