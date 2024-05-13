@@ -64,19 +64,19 @@ const cartSlice = createSlice({
         },
         removeFromCart: (state, action) => {
 
-            const addedProduct = action.payload
+            const removedProduct = action.payload
 
             try {
 
-                const exist = state.cart.find((product) => product.id === addedProduct.id)
+                const exist = state.cart.find((product) => product.id === removedProduct.id)
 
                 if (exist.amount === 1) {
 
-                    state.cart = state.cart.filter((product) => product.id !== addedProduct.id);
+                    state.cart = state.cart.filter((product) => product.id !== removedProduct.id);
 
                     state.totalAmount--;
 
-                    state.totalPrice -= addedProduct.price;
+                    state.totalPrice -= removedProduct.price;
 
                     updateData(state.cart, state.totalAmount, state.totalPrice)
 
@@ -84,11 +84,11 @@ const cartSlice = createSlice({
 
                     exist.amount--;
 
-                    exist.totalPrice -= addedProduct.price;
+                    exist.totalPrice -= removedProduct.price;
 
                     state.totalAmount--;
 
-                    state.totalPrice -= addedProduct.price;
+                    state.totalPrice -= removedProduct.price;
 
                     updateData(state.cart, state.totalAmount, state.totalPrice)
 

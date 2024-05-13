@@ -915,7 +915,7 @@ export const products = [
         name: "GlimmerGlow Mini CrossLeather Bag",
         text: "the GlimmerGlow Mini CrossLeather Bag, a small crossbody leather bag designed to shimmer and captivate with its elegance. This bag is perfect for women who appreciate a compact and fashionable accessory that seamlessly combines style and functionality.Crafted from premium leather, the GlimmerGlow Mini CrossLeather Bag showcases meticulous craftsmanship and attention to detail. Its sleek and compact design exudes sophistication and modernity.Despite its small size, this bag offers efficient storage space. The main compartment comfortably accommodates your essentials, including your phone, keys, wallet, and a few personal items. An interior zippered pocket helps keep your valuables secure and organized.The crossbody style of the GlimmerGlow Mini CrossLeather Bag provides hands-free convenience, allowing you to move with ease and confidence. The adjustable leather strap ensures a comfortable fit tailored to your preference.Every aspect of this bag is thoughtfully designed to shimmer and catch the light. The exquisite metal hardware, adorned with subtle glimmering accents, adds a touch of glamour, while the precise stitching showcases the exceptional craftsmanship.",
         brand: "Tatstore",
-        color: ["dark coffe"],
+        color: ["brown"],
         price: 750,
         category: 'shoes & bags'
     },

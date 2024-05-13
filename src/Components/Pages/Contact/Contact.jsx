@@ -19,12 +19,11 @@ const Contact = () => {
         publicKey: "1PczDjoXIqfE2Anou",
       })
       .then(
-        (result) => {
-          console.log("message sent");
+        () => {
           e.target.reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          return error;
         }
       );
   };
@@ -81,7 +80,7 @@ const Contact = () => {
                     color: "#4f5e7b",
                   }}
                 >
-                  12 Goverment Building Street
+                  12 Government Building Street
                 </p>
               </li>
               <li
@@ -164,11 +163,7 @@ const Contact = () => {
             <iframe
               width="650"
               height="400"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              allowfullscreen
+              allowFullScreen
               src="https://maps.google.com/maps?width=500&amp;height=400&amp;hl=en&amp;q=Damnhour%20sports%20stadium+(QAT3)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             >
               <a href="https://www.gps.ie/">gps vehicle tracker</a>
@@ -253,7 +248,8 @@ const Contact = () => {
                     />
                   </div>
 
-                  <p style={{}}>
+
+                  <span>
                     <span
                       style={{
                         fontSize: "20px",
@@ -269,7 +265,8 @@ const Contact = () => {
                     <h4>Front-End Developer</h4>
                     <h4>Phone : {member.phone}</h4>
                     <h4>E-mail : {member.email}</h4>
-                  </p>
+                  </span>
+
                 </div>
               );
             })}
