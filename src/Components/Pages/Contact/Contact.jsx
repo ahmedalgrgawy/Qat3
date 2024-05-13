@@ -2,9 +2,9 @@ import { FaMap, FaPhoneAlt, FaClock } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "./Contact.css";
 import { useRef } from "react";
-// import emailjs from "@emailjs/browser";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Team } from "../../../assets/data";
 
 
