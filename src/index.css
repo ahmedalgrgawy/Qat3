@@ -5,15 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply capitalize;
-        font-family: "Roboto", sans-serif;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
     .container {
         @apply px-[80px] mx-auto;
     }
@@ -37,6 +28,15 @@
     .col {
         @apply flex flex-col items-start mb-[20px];
     }
+}
+
+body {
+    @apply capitalize;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 :root {
