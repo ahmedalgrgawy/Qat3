@@ -11,22 +11,36 @@ const productSlice = createSlice({
     },
     reducers: {
         filterProduct(state, action) {
-            try {
-                const filter = products.filter((product) => product.category.toLowerCase() === action.payload.toLowerCase())
 
-                state.filteredProducts = filter;
+            if (action.payload.toLowerCase() === "all categories") {
 
-                const saveState = JSON.stringify(filter);
+                state.filterOn = false;
 
-                sessionStorage.setItem('filterData', saveState)
+            } else {
 
-                state.filterOn = true;
+                try {
 
-                state.error = false;
+                    const filter = products.filter((product) => product.category.toLowerCase() === action.payload.toLowerCase())
 
-            } catch (err) {
-                return err;
+                    state.filteredProducts = filter;
+
+                    const saveState = JSON.stringify(filter);
+
+                    sessionStorage.setItem('filterData', saveState)
+
+                    state.filterOn = true;
+
+                    state.error = false;
+
+                } catch (err) {
+
+                    return err;
+
+                }
+
             }
+
+
         },
         singleProduct(state, action) {
             try {

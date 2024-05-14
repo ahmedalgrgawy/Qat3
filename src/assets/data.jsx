@@ -125,7 +125,7 @@ export const logos = {
 }
 
 
-export const categories = ['Clothes', 'Makeup', 'Self Care', 'Shoes & bags']
+export const categories = ['All Categories', 'Clothes', 'Makeup', 'Self Care', 'Shoes & bags']
 
 export const products = [
     {
