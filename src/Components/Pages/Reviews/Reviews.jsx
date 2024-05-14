@@ -18,7 +18,7 @@ export default function Reviews() {
             <section key={index} data-aos='flip-up' className="cursor-pointer border h-full w-full shadow-xl m-2 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 ">
               <div className="flex">
                 <img
-                  className=" rounded-full w-11 h-11 m-2 mt-3"
+                  className="object-cover rounded-full w-11 h-11 m-2 mt-3"
                   src={review.imageUrl}
                   alt=""
                 />
