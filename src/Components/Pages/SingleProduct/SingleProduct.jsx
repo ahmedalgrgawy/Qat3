@@ -2,10 +2,11 @@ import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../../features/cart/cartSlice';
 import { useParams } from 'react-router-dom';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SingleProduct() {
-
+    const notify = () => toast.success("Added to cart Successfully 🥳");
     const dispatch = useDispatch()
 
     const product = useSelector(state => state.products.SingleProduct)
@@ -46,7 +47,7 @@ export default function SingleProduct() {
                                     </select>
 
                                     <button className="ms-5 py-2 px-5 bg-main-darker text-white font-semibold rounded-lg shadow-md hover:bg-main focus:outline-none duration-300 "
-                                        onClick={() => dispatch(addToCart({
+                                        onClick={() => {dispatch(addToCart({
                                             id: item.id,
                                             price: item.price,
                                             amount: 1,
@@ -55,7 +56,7 @@ export default function SingleProduct() {
                                             color: item.color,
                                             img: item.img,
                                             text: item.text
-                                        }))}>Add To Cart</button>
+                                        }));notify();}}>Add To Cart</button>
                                 </div>
 
                                 <h2 className="mb-5 text-3xl font-bold">Product Details :</h2>
@@ -64,6 +65,8 @@ export default function SingleProduct() {
                                     {item.text}
                                 </p>
                             </div>
+                            <ToastContainer position="bottom-right" color="#4f5e7b" />
+
                         </div>
                     </div>
                 )
