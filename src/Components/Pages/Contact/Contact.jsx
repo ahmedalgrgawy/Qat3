@@ -27,6 +27,7 @@ const Contact = () => {
         }
       );
   };
+
   const notify = () => toast.success("Submitted Successfully!");
 
   return (
@@ -223,7 +224,7 @@ const Contact = () => {
             >
               Submit
             </button>
-            <ToastContainer position="bottom-right" color="#4f5e7b" />
+            <ToastContainer position="bottom-right" color="#3b4356" />
           </form>
 
           <div className="members pl-5">

@@ -62,16 +62,18 @@ export default function Shop() {
                                         </div>
                                     </NavLink>
                                     <button
-                                        onClick={() => dispatch(addToCart({
-                                            id: product.id,
-                                            price: product.price,
-                                            amount: 1,
-                                            totalPrice: product.price,
-                                            name: product.name,
-                                            color: product.color,
-                                            img: product.img,
-                                            text: product.text
-                                        }))} href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
+                                        onClick={() => {
+                                            dispatch(addToCart({
+                                                id: product.id,
+                                                price: product.price,
+                                                amount: 1,
+                                                totalPrice: product.price,
+                                                name: product.name,
+                                                color: product.color,
+                                                img: product.img,
+                                                text: product.text
+                                            })); notify();
+                                        }} href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300">
                                         <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
                                     </button>
                                 </div>
@@ -101,16 +103,18 @@ export default function Shop() {
                                             </div>
                                         </NavLink>
                                         <button href="#" className="absolute right-10 bottom-5  w-12 h-12 bg-main-darker rounded-[50%] flex items-center justify-center hover:bg-main duration-300"
-                                            onClick={() => {dispatch(addToCart({
-                                                id: product.id,
-                                                price: product.price,
-                                                amount: 1,
-                                                totalPrice: product.price,
-                                                name: product.name,
-                                                color: product.color,
-                                                img: product.img,
-                                                text: product.text
-                                            })); notify();}}>
+                                            onClick={() => {
+                                                dispatch(addToCart({
+                                                    id: product.id,
+                                                    price: product.price,
+                                                    amount: 1,
+                                                    totalPrice: product.price,
+                                                    name: product.name,
+                                                    color: product.color,
+                                                    img: product.img,
+                                                    text: product.text
+                                                })); notify();
+                                            }}>
                                             <i className="text-white">{<FaShoppingCart className="text-[20px]" />}</i>
                                         </button>
                                     </div>
@@ -119,7 +123,7 @@ export default function Shop() {
                         )}
                 </div>
             </div>
-            <ToastContainer position="bottom-right" color="#4f5e7b" />
+            <ToastContainer position="top-left" color="#4f5e7b" />
         </div>
     )
 }

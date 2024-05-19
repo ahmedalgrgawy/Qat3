@@ -47,16 +47,18 @@ export default function SingleProduct() {
                                     </select>
 
                                     <button className="ms-5 py-2 px-5 bg-main-darker text-white font-semibold rounded-lg shadow-md hover:bg-main focus:outline-none duration-300 "
-                                        onClick={() => {dispatch(addToCart({
-                                            id: item.id,
-                                            price: item.price,
-                                            amount: 1,
-                                            totalPrice: item.price,
-                                            name: item.name,
-                                            color: item.color,
-                                            img: item.img,
-                                            text: item.text
-                                        }));notify();}}>Add To Cart</button>
+                                        onClick={() => {
+                                            dispatch(addToCart({
+                                                id: item.id,
+                                                price: item.price,
+                                                amount: 1,
+                                                totalPrice: item.price,
+                                                name: item.name,
+                                                color: item.color,
+                                                img: item.img,
+                                                text: item.text
+                                            })); notify();
+                                        }}>Add To Cart</button>
                                 </div>
 
                                 <h2 className="mb-5 text-3xl font-bold">Product Details :</h2>
